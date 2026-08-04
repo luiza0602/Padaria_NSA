@@ -1,0 +1,133 @@
+:root{
+
+    --vinho:#7B2D2D;
+    --vinho-hover:#642323;
+
+    --bege:#F8F6F3;
+
+    --preto:#222;
+
+    --cinza:#666;
+
+    --branco:#FFF;
+
+}
+
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+
+    background:var(--branco);
+
+    height:90px;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+}
+
+
+header .container{
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+/* Logo */
+
+.logo img{
+
+    height:55px;
+
+}
+
+
+/* Menu */
+
+.menu ul{
+
+    display:flex;
+
+    gap:45px;
+
+}
+
+.menu a{
+
+    font-size:15px;
+
+    font-weight:500;
+
+    color:var(--preto);
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:var(--vinho);
+
+}
+
+
+/* Botão */
+
+.btn-login{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:var(--vinho);
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:8px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.btn-login:hover{
+
+    background:var(--vinho-hover);
+
+    transform:translateY(-2px);
+
+}
