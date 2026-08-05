@@ -15,8 +15,12 @@ body{
 }
 
 a{
+   
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
     text-decoration: none;
     color: inherit;
+    text-transform: uppercase;
 }
 
 ul{
