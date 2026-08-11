@@ -22,6 +22,7 @@
         rel="stylesheet">
 
 
+
 </head>
 
 <body>
@@ -143,7 +144,7 @@
                 <div class="diferencial-card">
 
                     <div class="diferencial-icon">
-                        <img class="espiga" src="..." alt="Espiga de milho">
+                        <img class="espiga" src="assets/img/espiga.png" alt="Espiga de milho">
                     </div>
                     <h3>Ingredientes de qualidade</h3>
                     <p>
@@ -151,11 +152,11 @@
                     </p>
 
                 </div>
-                
+
                 <div class="diferencial-card">
 
                     <div class="diferencial-icon">
-                        <img class="heart" src="..." alt="Coração">
+                        <img class="heart" src="assets/img/heart.png" alt="Coração">
                     </div>
                     <h3>feito com amor</h3>
                     <p>
@@ -167,7 +168,7 @@
                 <div class="diferencial-card">
 
                     <div class="diferencial-icon">
-                        <img class="clock" src="..." alt="Relógio">
+                        <img class="clock" src="assets/img/clock.png" alt="Relógio">
                     </div>
                     <h3>Sempre Fresquinho</h3>
                     <p>
@@ -181,15 +182,137 @@
         </section>
 
 
-        <!-- Produtos em Destaque -->
-        <section id="destaques">
+        <section id="destaques" class="destaques-section">
+
+            <div class="container">
+
+                <span class="tagline">Nossos destaques</span>
+
+                <h2 class="destaques-titulo">
+                    Feitos com paixão, <br>
+                    servidos com amor
+                </h2>
+
+                <div class="carrossel" id="carrossel">
+
+                    <div class="carrossel-track" id="carrossel-track">
+
+                        <div class="carrossel-slide">
+                            <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&q=80"
+                                alt="Sanduíche de croissant com presunto e queijo">
+                        </div>
+
+                        <div class="carrossel-slide">
+                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=1200&q=80"
+                                alt="Café com leite cremoso">
+                        </div>
+
+                        <div class="carrossel-slide">
+                            <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=1200&q=80"
+                                alt="Vinho quente artesanal">
+                        </div>
+
+                        <div class="carrossel-slide">
+                            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&q=80"
+                                alt="Sanduíche de pão italiano">
+                        </div>
+
+                        <div class="carrossel-slide">
+                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1200&q=80"
+                                alt="Café com chantilly">
+                        </div>
+
+                    </div>
+
+                    <button class="carrossel-btn prev" id="carrossel-prev" aria-label="Slide anterior">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="carrossel-btn next" id="carrossel-next" aria-label="Próximo slide">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+                <div class="carrossel-dots" id="carrossel-dots"></div>
+
+                <a href="cardapio.html" class="btn-cardapio">
+                    Explorar cardápio completo
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
 
         </section>
 
 
         <!-- Contato -->
-        <section id="contato">
+        <section id="contato" class="contato-section">
+            <div class="container-contato">
 
+                <span class="section-subtitle">FALE CONOSCO</span>
+                <h2 class="section-title">Venha nos visitar</h2>
+                <p class="contato-descricao">
+                    Estamos sempre prontos para receber você. Venha conhecer nossa padaria e experimentar nossas
+                    delícias.
+                </p>
+                <div class="contato_mapa">
+                    <div class="contato-info-grid">
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Endereço</h4>
+                                <p>Rua AAAAA, 123<br>Centro - São Paulo, SP<br>CEP: 00000-100</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Telefone</h4>
+                                <p>(11) 3456-7890<br>(11) 98765-4321</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Horário de Funcionamento</h4>
+                                <p>
+                                    Segunda a Sexta: 6h às 20h<br>
+                                    Sábado: 6h às 18h<br>
+                                    Domingo: 7h às 13h
+                                </p>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="wpp">
+                            <a href="https://wa.me/5511987654321" target="_blank" class="btn-whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i> Fazer pedido pelo Whatsapp
+                            </a>
+                        </div>
+                    </div>
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.68529130953!2d-48.2048717!3d-21.7924378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8f187371a97d5%3A0xb1dd65097967c930!2sPadaria%20NSA!5e0!3m2!1spt-BR!2sbr!4v1786466009368!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+                </div>
+
+
+
+            </div>
         </section>
 
     </main>
