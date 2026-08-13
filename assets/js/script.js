@@ -1,3 +1,5 @@
+
+
 /*carrosel - destaques */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -76,4 +78,36 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoplay();
 
 });
+
+// Menu  (mobile)
+const menuToggle = document.getElementById('menuToggle');
+const menuPrincipal = document.getElementById('menuPrincipal');
+ 
+if (menuToggle && menuPrincipal) {
+ 
+    menuToggle.addEventListener('click', () => {
+ 
+        const aberto = menuPrincipal.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', aberto);
+ 
+        // Troca o ícone entre "barras" e "x"
+        const icone = menuToggle.querySelector('i');
+        icone.classList.toggle('fa-bars');
+        icone.classList.toggle('fa-xmark');
+ 
+    });
+ 
+    // Fecha o menu ao clicar em um link
+    menuPrincipal.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            menuPrincipal.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+ 
+            const icone = menuToggle.querySelector('i');
+            icone.classList.add('fa-bars');
+            icone.classList.remove('fa-xmark');
+        });
+    });
+ 
+}
 
