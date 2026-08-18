@@ -646,6 +646,13 @@ header .container {
     }
 }
 
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
 /*Contato */
 
 .section-subtitle{
@@ -659,13 +666,6 @@ header .container {
    
 }
 
-.contato_mapa{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-bottom: 25px;
-
-}
 
 
 .container-contato{
@@ -685,14 +685,31 @@ header .container {
     font-family: "Poppins", serif;
 }
 
+.main-container-p2{
+    display: flex;
+    justify-content: center;
+
+}
+
 .contato-info-grid {
     display: flex;
     flex-direction: column;
     gap: 25px;
     max-width: 500px;
-    margin: 0 auto 40px auto;
     text-align: left;
 }
+
+.contato_mapa{
+    display: flex;
+    margin-inline: auto;
+    gap: 10rem;
+    flex-direction: row;
+    margin-bottom: 25px;
+    
+    
+
+}
+
 
 .info-item {
     display: flex;
@@ -717,14 +734,14 @@ header .container {
     font-size: 1.1rem;
     color: #1a1a1a;
     margin-bottom: 5px;
-    text-align: center;
+    text-align: left;
 }
 
 .info-text p {
     color: #666;
     font-size: 0.95rem;
     line-height: 1.5;
-    text-align: center;
+    text-align: left;
 }
 
 /* Botão WhatsApp */
@@ -745,3 +762,109 @@ header .container {
 .btn-whatsapp:hover {
     background-color: #1eb954;
 }
+
+/* footer */
+
+.footer-section {
+    background-color: #0b0b0b; /* Fundo preto/escuro */
+    color: #ffffff;
+    padding-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer-coluna {
+    flex: 1;
+    margin-left: 80px;
+}
+
+.footer-coluna h4 {
+    font-size: 1.1rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Coluna 1: Logo e Texto */
+.footer-logo img {
+    width: 130px;
+    height: auto;
+    margin-bottom: 15px;
+    /* Inverte a cor do logo para branco caso seja escuro */
+    filter: brightness(0) invert(1); 
+}
+
+.footer-descricao {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 280px;
+}
+
+/* Coluna 2: Links Rápidos */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Coluna 3: Redes Sociais */
+.footer-sociais {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-sociais a {
+    width: 40px;
+    height: 40px;
+    background-color: #222222;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer-sociais a:hover {
+    background-color: #8B2626; /* Cor destaque ao passar o mouse */
+    transform: translateY(-3px);
+}
+
+/* Rodapé Inferior (Copyright) */
+.footer-bottom {
+    border-top: 1px solid #222222;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #777777;
+    font-size: 0.85rem;
+}
+
+
+
+
+
