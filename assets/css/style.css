@@ -702,7 +702,7 @@ header .container {
 .contato_mapa{
     display: flex;
     margin-inline: auto;
-    gap: 10rem;
+    gap: 15rem;
     flex-direction: row;
     margin-bottom: 25px;
     

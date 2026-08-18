@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Entrar - Padaria NSA</title>
+    <title>Criar conta - Padaria NSA</title>
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -28,7 +28,7 @@
 
     <div class="auth-box">
 
-        <!--lado logo-->
+        <!-- lado logo -->
         <div class="auth-lado">
             <img src="assets/img/logo.png" alt="Logo Padaria NSA">
         </div>
@@ -36,35 +36,58 @@
         <!-- form -->
         <div class="auth-conteudo">
 
-            <h1>Bem-vindo de volta</h1>
-            <p class="auth-subtitulo">Entre com sua conta para continuar</p>
+            <h1>Crie Sua Conta</h1>
+            <p class="auth-subtitulo">Preencha os dados abaixo para se cadastrar</p>
 
-            <form class="auth-form" id="form-login" action="login.php" method="POST">
+            <form class="auth-form" id="form-cadastro" action="cadastro.php" method="POST">
 
                 <div class="campo">
-                    <label for="login-email">E-mail</label>
+                    <label for="cad-email">E-mail</label>
                     <div class="input-icone">
                         <i class="fa-regular fa-envelope"></i>
-                        <input type="email" id="login-email" name="email" placeholder="seu@email.com" required>
+                        <input type="email" id="cad-email" name="email" placeholder="seu@email.com" required>
                     </div>
+                </div>
+
+                <div class="auth-linha">
+
+                    <div class="campo">
+                        <label for="cad-senha">Senha</label>
+                        <div class="input-icone">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="cad-senha" name="senha" placeholder="Mínimo de 6 dígitos"
+                                minlength="6" required>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cad-confirma-senha">Confirme a Senha</label>
+                        <div class="input-icone">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="cad-confirma-senha" name="confirma_senha"
+                                placeholder="Digite novamente" minlength="6" required>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="campo">
-                    <label for="login-senha">Senha</label>
+                    <label for="cad-telefone">Telefone</label>
                     <div class="input-icone">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" id="login-senha" name="senha" placeholder="Digite sua senha" required>
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" id="cad-telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
                     </div>
                 </div>
 
-                <div class="auth-opcoes">
-                    <label class="lembrar">
-                        <input type="checkbox" id="lembrar" name="lembrar">
-                        Lembrar de mim
+                <div class="auth-termos">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">
+                        Li e concordo com os <a href="#">Termos de Uso</a> e a <a href="#">Política de
+                            Privacidade</a>
                     </label>
                 </div>
 
-                <button type="submit" class="btn-auth">Entrar</button>
+                <button type="submit" class="btn-auth">Criar conta</button>
 
                 <div class="auth-divisor">ou continue com</div>
 
@@ -78,7 +101,7 @@
                 </div>
 
                 <p class="auth-rodape">
-                    Ainda não possui uma conta? <a href="cadastro.html">Cadastre-se</a>
+                    Já tem uma conta? <a href="login.html">Faça Login</a>
                 </p>
 
                 <a href="index.html" class="auth-voltar">

@@ -1,0 +1,266 @@
+/* 
+   paginas de autentificacao (login / cadastro)
+ */
+
+.auth-body {
+    background: var(--bege);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 900px;
+    min-height: 560px;
+    display: flex;
+    background: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.auth-lado {
+    flex: 1;
+    background: #E3E1DE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.auth-lado img {
+    max-width: 200px;
+}
+
+.auth-conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 55px;
+}
+
+.auth-conteudo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--preto);
+    margin-bottom: 6px;
+}
+
+.auth-subtitulo {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--cinza);
+    margin-bottom: 30px;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.auth-form label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: none;
+}
+
+.auth-linha {
+    display: flex;
+    gap: 16px;
+}
+
+.auth-linha .campo {
+    flex: 1;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.input-icone {
+    display: flex;
+    align-items: center;
+    border: 1px solid #DDD8D0;
+    border-radius: 8px;
+    padding: 0 14px;
+    background: var(--bege);
+    transition: border-color .2s ease;
+}
+
+.input-icone:focus-within {
+    border-color: var(--vinho);
+}
+
+.input-icone i {
+    color: var(--cinza);
+    font-size: 0.9rem;
+}
+
+.input-icone input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    color: var(--preto);
+}
+
+.auth-opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    font-size: 0.82rem;
+}
+
+.lembrar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    text-transform: none;
+    color: var(--cinza);
+}
+
+.lembrar input {
+    accent-color: var(--vinho);
+}
+
+.auth-termos {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 22px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: none;
+    color: var(--cinza);
+    line-height: 1.4;
+}
+
+.auth-termos input {
+    margin-top: 3px;
+    accent-color: var(--vinho);
+}
+
+.auth-termos a {
+    color: var(--vinho);
+    text-transform: none;
+    font-weight: 600;
+}
+
+.btn-auth {
+    width: 100%;
+    background: var(--vinho);
+    color: var(--branco);
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.btn-auth:hover {
+    background: var(--vinho-hover);
+}
+
+.auth-divisor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+    font-size: 0.75rem;
+    color: var(--cinza);
+    text-transform: none;
+    font-weight: 400;
+}
+
+.auth-divisor::before,
+.auth-divisor::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #E3DFD8;
+}
+
+.auth-social {
+    display: flex;
+    gap: 14px;
+}
+
+.btn-social {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #DDD8D0;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--preto);
+    text-transform: none;
+    background: var(--branco);
+    transition: background .2s;
+}
+
+.btn-social:hover {
+    background: var(--bege);
+}
+
+.btn-social i.fa-google { color: #DB4437; }
+.btn-social i.fa-facebook { color: #1877F2; }
+
+.auth-rodape {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.82rem;
+    color: var(--cinza);
+    font-weight: 400;
+    text-transform: none;
+}
+
+.auth-rodape a,
+.auth-rodape strong a {
+    color: var(--vinho);
+    text-transform: none;
+    font-weight: 600;
+}
+
+.auth-voltar {
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: none;
+    color: var(--cinza);
+}
+
+.auth-voltar:hover {
+    color: var(--vinho);
+}
+
+@media (max-width: 720px) {
+    .auth-lado {
+        display: none;
+    }
+
+    .auth-conteudo {
+        padding: 40px 26px;
+    }
+
+    .auth-linha {
+        flex-direction: column;
+        gap: 0;
+    }
+}
