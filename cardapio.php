@@ -21,7 +21,7 @@
 
         <div class="container">
 
-            <a href="index.php" class="logo">
+            <a href="index.html" class="logo">
                 <img src="assets/img/logo.png" alt="Padaria NSA">
             </a>
 
@@ -30,11 +30,11 @@
                 <ul>
 
                     <li>
-                        <a href="index.php">Início</a>
+                        <a href="index.html">Início</a>
                     </li>
 
                     <li>
-                        <a href="sobre.php">Sobre</a>
+                        <a href="sobre">Sobre</a>
                     </li>
 
                     <li>
@@ -42,14 +42,14 @@
                     </li>
 
                     <li>
-                        <a href="contato.php">Contato</a>
+                        <a href="contato">Contato</a>
                     </li>
 
                 </ul>
 
             </nav>
 
-            <a href="login.php" class="btn-login">
+            <a href="login.html" class="btn-login">
                 Entrar
             </a>
 
@@ -66,7 +66,7 @@
 
         <div class="cardapio-topo">
 
-            <a href="index.php" class="voltar">
+            <a href="index.html" class="voltar">
                 ← Voltar
             </a>
 
