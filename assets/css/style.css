@@ -470,6 +470,20 @@ header .container {
 .btn-cardapio {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: var(--vinho);
+    color: #FFF;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: border-color .2s ease, color .2s ease;
+}
+
+.btn-cardapio2 {
+    display: inline-flex;
+    align-items: center;
     gap: 8px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -479,8 +493,8 @@ header .container {
 }
 
 .btn-cardapio:hover {
-    border-color: var(--vinho);
-    color: var(--vinho-hover);
+    background: var(--vinho-hover);
+    transform: translateY(-2px);
 }
 
 .btn-cardapio i {

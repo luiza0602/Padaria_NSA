@@ -50,7 +50,7 @@
 
             </nav>
 
-            <a href="login.html" class="btn-login">
+            <a href="login.php" class="btn-login">
                 Entrar
             </a>
 

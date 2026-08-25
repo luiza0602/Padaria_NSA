@@ -1,3 +1,41 @@
+
+<?php
+session_start();
+require 'includes/bd-padariansa.php';
+ 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+ 
+    $email = trim($_POST['email'] ?? '');
+    $senha = $_POST['senha'] ?? '';
+ 
+    if (!$email || !$senha) {
+        die('Preencha e-mail e senha.');
+    }
+ 
+    $stmt = $pdo->prepare('SELECT id, email, senha FROM usuarios WHERE email = ?');
+    $stmt->execute([$email]);
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+ 
+    if (!$usuario || !password_verify($senha, $usuario['senha'])) {
+        die('E-mail ou senha incorretos.');
+    }
+ 
+    // usuário autenticado
+    $_SESSION['usuario_id'] = $usuario['id'];
+    $_SESSION['usuario_email'] = $usuario['email'];
+ 
+    if (isset($_POST['lembrar'])) {
+        setcookie('lembrar_email', $email, time() + (30 * 24 * 60 * 60), '/');
+    }
+ 
+    header('Location: index.html');
+    exit;
+}
+ 
+ 
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -78,7 +116,7 @@
                 </div>
 
                 <p class="auth-rodape">
-                    Ainda não possui uma conta? <a href="cadastro.html">Cadastre-se</a>
+                    Ainda não possui uma conta? <a href="cadastro.php">Cadastre-se</a>
                 </p>
 
                 <a href="index.html" class="auth-voltar">

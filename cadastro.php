@@ -1,3 +1,66 @@
+<?php
+session_start();
+require 'includes/bd-padariansa.php';
+ 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+ 
+    $nome  = trim($_POST['nome'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $senha = $_POST['senha'] ?? '';
+    $confirmaSenha = $_POST['confirma_senha'] ?? '';
+    $telefone = trim($_POST['telefone'] ?? '');
+    $endereco = trim($_POST['endereco'] ?? '');
+    $termos = isset($_POST['termos']);
+ 
+    // validações básicas
+    if (!$email || !$senha || !$telefone) {
+        die('Preencha todos os campos.');
+    }
+ 
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die('E-mail inválido.');
+    }
+ 
+    if (strlen($senha) < 6) {
+        die('A senha precisa ter no mínimo 6 caracteres.');
+    }
+ 
+    if ($senha !== $confirmaSenha) {
+        die('As senhas não coincidem.');
+    }
+ 
+    if (!$termos) {
+        die('Você precisa aceitar os Termos de Uso.');
+    }
+ 
+    // verifica se o e-mail já existe
+    $stmt = $pdo->prepare('SELECT id_usuario FROM usuarios WHERE email = ?');
+    $stmt->execute([$email]);
+ 
+    if ($stmt->fetch()) {
+        die('Este e-mail já está cadastrado.');
+    }
+ 
+    // salva com senha criptografada
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+ 
+    $stmt = $pdo->prepare('INSERT INTO usuarios (email, senha, telefone) VALUES (?, ?, ?)');
+    $stmt->execute([$email, $senhaHash, $telefone]);
+ 
+    // loga o usuário automaticamente após o cadastro
+    $_SESSION['usuario_id'] = $pdo->lastInsertId();
+    $_SESSION['usuario_email'] = $email;
+ 
+    header('Location: index.html');
+    exit;
+}
+ 
+ 
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -101,7 +164,7 @@
                 </div>
 
                 <p class="auth-rodape">
-                    Já tem uma conta? <a href="login.html">Faça Login</a>
+                    Já tem uma conta? <a href="login.php">Faça Login</a>
                 </p>
 
                 <a href="index.html" class="auth-voltar">
