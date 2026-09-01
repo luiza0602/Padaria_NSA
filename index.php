@@ -1,3 +1,9 @@
+<?php
+session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -39,7 +45,7 @@
             </button>
 
             <!-- Logo -->
-            <a href="index.html" class="logo">
+            <a href="index.php" class="logo">
                 <img src="assets/img/logo.png" alt="Logo Padaria NSA">
             </a>
 
@@ -63,21 +69,25 @@
                     </li>
 
                     <li>
-                        <a href="#visite">Contato</a>
+                        <a href="#contato">Contato</a>
                     </li>
 
                 </ul>
 
             </nav>
 
-            <!-- botao login -->
-            <a href="login.php" class="btn-login">
-
-                <i class="fa-regular fa-user"></i>
-
-                Entrar
-
-            </a>
+           <!-- botao login -->
+            <?php if (isset($_SESSION['usuario_id'])): ?>
+                        <a href="perfil.php" class="btn-login">
+                            <i class="fa-regular fa-user"></i>
+            <?php echo htmlspecialchars($_SESSION['usuario_nome']); ?>
+                        </a>
+            <?php else: ?>
+                        <a href="login.php" class="btn-login">
+                            <i class="fa-regular fa-user"></i>
+                                Entrar
+                        </a>
+            <?php endif; ?>
 
         </div>
 

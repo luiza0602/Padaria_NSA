@@ -67,11 +67,11 @@
 
         <div class="cardapio-topo">
 
-            <a href="index.html" class="voltar">
+            <a href="index.php" class="voltar">
                 ← Voltar
             </a>
 
-           <a href="index.html" class="logo">
+           <a href="index.php" class="logo">
                 <img src="assets/img/logo.png" alt="Padaria NSA">
             </a>
 
