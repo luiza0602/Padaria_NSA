@@ -37,7 +37,7 @@
 }
 
 .cardapio-topo img {
-    width: 55px;
+    width: 150px;
 }
 
 .voltar {
@@ -94,9 +94,9 @@
     line-height: 1.5;
 }
 
-cardapio-topo {
+.cardapio-topo {
      width: 100%;
-      height: 55px;
+      height: 90px;
   
       background-color: #ffffff;
  

@@ -65,19 +65,17 @@
 
         <!-- Barra superior -->
 
-        <div class="cardapio-topo">
+   <div class="cardapio-topo">
 
-             <div class="cardapio-topo">
- 
-      <a href="index.html" class="voltar">
-          ← Voltar
-     </a>
+    <a href="index.php" class="voltar">
+        ← Voltar
+    </a>
 
-       <a href="index.html" class="logo-topo">   
-           <img src="assets/img/logo.png" alt="Logo Padaria NSA">
-      </a>
- 
-   </div>
+    <a href="index.php" class="logo-topo">
+        <img src="assets/img/logo.png" alt="Logo Padaria NSA">
+    </a>
+
+</div>
 
         </div>
 
@@ -285,7 +283,7 @@
             <!-- ===== BEBIDAS ===== -->
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/produto1.jpg" alt="Suco de Acerola">
+                <img src="assets/img/SUCO ACEROLA.jpg" alt="Suco de Acerola">
                 <div class="produto-info">
                     <h2>Suco de Acerola</h2>
                     <p>Explosão de vitamina C e frescor em cada gole da colheita.</p>
@@ -297,7 +295,7 @@
             </article>
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/produto2.jpg" alt="Suco de Abacaxi">
+                <img src="assets/img/SUCO ABACAXI.jpg" alt="Suco de Abacaxi">
                 <div class="produto-info">
                     <h2>Suco de Abacaxi</h2>
                     <p>Refrescante e adocicado, preparado com frutas selecionadas e bem gelado.</p>
@@ -309,7 +307,7 @@
             </article>
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/produto3.jpg" alt="Suco de Cupuaçu">
+                <img src="assets/img/SUCO CUPUAÇU.jpg" alt="Suco de Cupuaçu">
                 <div class="produto-info">
                     <h2>Suco de Cupuaçu</h2>
                     <p>Sabor nativo da Amazônia, cremoso e com toque tropical inconfundível.</p>
@@ -321,7 +319,7 @@
             </article>
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/produto4.jpg" alt="Suco de Caju">
+                <img src="assets/img/SUCO DE CAJU.jpg" alt="Suco de Caju">
                 <div class="produto-info">
                     <h2>Suco de Caju</h2>
                     <p>Sabor tropical e delicado da caju com uma leve acidez refrescante.</p>
@@ -333,10 +331,10 @@
             </article>
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/produto1.jpg" alt="Suco de Morango">
+                <img src="assets/img/SUCO FRUTAS VERMELHAS.jpg" alt="Suco de frutas vermelhas">
                 <div class="produto-info">
-                    <h2>Suco de Morango</h2>
-                    <p>Feito com morangos frescos, equilibrando doçura e acidez na medida certa.</p>
+                    <h2>Suco de Frutas Vermelhas</h2>
+                    <p>Feito com frutas vermelhas frescas, equilibrando doçura e acidez na medida certa.</p>
                     <div class="produto-footer">
                         <strong>R$ 12,90</strong>
                         <button>Adicionar</button>
@@ -345,7 +343,7 @@
             </article>
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/produto2.jpg" alt="Suco de Laranja">
+                <img src="assets/img/SUCO LARANJA.jpg" alt="Suco de Laranja">
                 <div class="produto-info">
                     <h2>Suco de Laranja</h2>
                     <p>O clássico indispensável, natural, espremido na hora e cheio de vitamina.</p>
