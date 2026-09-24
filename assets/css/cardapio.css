@@ -401,3 +401,26 @@ padding: 0 6%;
         flex-shrink: 0;
     }
 }
+
+/* ========================================
+   CARRINHO - MODAL
+   ======================================== */
+
+.carrinho-modal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center}
+.carrinho-overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(3px)}
+.carrinho-caixa{position:relative;width:90%;max-width:500px;max-height:85vh;overflow-y:auto;background:#fff;border-radius:15px;padding:25px;box-shadow:0 20px 50px rgba(0,0,0,.2);z-index:2;animation:aparecerCarrinho .25s ease}
+@keyframes aparecerCarrinho{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.carrinho-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid #eee8e0}
+.carrinho-header h2{margin:0;color:#2C2C2C;font-family:'Playfair Display',serif;font-size:25px}
+.carrinho-fechar{border:none;background:none;color:#666;font-size:28px;cursor:pointer;line-height:1}
+.carrinho-fechar:hover{color:#7B2D2D}
+.carrinho-itens{padding:10px 0}
+.item-carrinho{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 0;border-bottom:1px solid #eee8e0}
+.item-info{flex:1}.item-info h3{margin:0 0 5px;color:#2C2C2C;font-family:'Poppins',sans-serif;font-size:13px;font-weight:500}.item-info strong{color:#7B2D2D;font-family:'Poppins',sans-serif;font-size:13px}
+.item-controles{display:flex;align-items:center;gap:8px}.item-controles button{width:28px;height:28px;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s}
+.btn-menos,.btn-mais{background:#F8F6F3;color:#7B2D2D;font-size:16px}.btn-menos:hover,.btn-mais:hover{background:#7B2D2D;color:#fff}.item-controles span{min-width:20px;color:#2C2C2C;font-family:'Poppins',sans-serif;font-size:13px;text-align:center}
+.btn-remover{margin-left:5px;background:transparent;color:#999;font-size:12px}.btn-remover:hover{background:#f5dddd;color:#7B2D2D}
+.carrinho-vazio{padding:45px 15px;text-align:center}.carrinho-vazio i{margin-bottom:15px;color:#7B2D2D;font-size:35px}.carrinho-vazio p{margin-bottom:5px;color:#2C2C2C;font-family:'Playfair Display',serif;font-size:20px}.carrinho-vazio span{color:#777;font-family:'Poppins',sans-serif;font-size:12px}
+.carrinho-total{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.carrinho-total span{color:#666;font-family:'Poppins',sans-serif;font-size:14px}.carrinho-total strong{color:#7B2D2D;font-family:'Poppins',sans-serif;font-size:19px}
+.btn-finalizar{width:100%;padding:13px;border:none;border-radius:25px;background:#7B2D2D;color:#fff;font-family:'Poppins',sans-serif;font-size:13px;font-weight:500;cursor:pointer}.btn-finalizar:hover{background:#642323}
+@media(max-width:560px){.carrinho-caixa{width:92%;padding:20px}.item-carrinho{align-items:flex-start;flex-direction:column}.item-controles{width:100%;justify-content:flex-end}}
