@@ -77,8 +77,6 @@
 
 </div>
 
-        </div>
-
 
         <!-- Apresentação -->
 
@@ -433,8 +431,7 @@
 
 
         <!-- CTA -->
-<nav>
-        <section class="cardapio-cta id= "cardapio-fundo>
+        <section class="cardapio-cta" id="cardapio-fundo">
 
             <h2>
                 Gostou do que viu?
@@ -445,24 +442,21 @@
                 e finalize seu pedido.
             </p>
 
-            <a href="contato.php">
+            <a href="index.php#contato">
                 Fale Conosco
             </a>
 
         </section>
 
     </main>
-</nav>
 
-    
-
-     <!-- Rodapé -->
+    <!-- Rodapé -->
     <footer>
 
         <section id="footer" class="footer-section">
             <div class="footer-container">
                 <div class="footer-coluna logo-coluna">
-                    <a href="index.html" class="footer-logo">
+                    <a href="index.php" class="footer-logo">
                         <img src="assets/img/logo.png" alt="Logo Padaria NSA">
                     </a>
                     <p>Tradição e sabor desde 2007. Pães artesanais feitos com amor e ingredientes selecionados.</p>
@@ -470,10 +464,10 @@
                 <div class="footer-coluna">
                     <h4></h4>
                     <ul class="footer-links">
-                        <li><a href="#hero">Início</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#destaques">Cardápio</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="index.php#hero">Início</a></li>
+                        <li><a href="index.php#sobre">Sobre Nós</a></li>
+                        <li><a href="index.php#destaques">Cardápio</a></li>
+                        <li><a href="index.php#contato">Contato</a></li>
                     </ul>
                 </div>
 
