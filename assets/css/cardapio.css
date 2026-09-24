@@ -401,3 +401,218 @@ padding: 0 6%;
         flex-shrink: 0;
     }
 }
+/* ========================================
+   CARRINHO - MODAL
+   ======================================== */
+
+body.carrinho-aberto { overflow: hidden; }
+
+.carrinho-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.carrinho-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 15, 15, .58);
+    backdrop-filter: blur(4px);
+}
+
+.carrinho-caixa {
+    position: relative;
+    z-index: 2;
+    width: min(500px, 100%);
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 25px 70px rgba(0,0,0,.28);
+    animation: aparecerCarrinho .22s ease;
+}
+
+@keyframes aparecerCarrinho {
+    from { opacity: 0; transform: translateY(18px) scale(.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.carrinho-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee8e0;
+}
+
+.carrinho-subtitulo {
+    color: #7B2D2D;
+    font: 500 10px/1 'Poppins', sans-serif;
+    letter-spacing: 2px;
+}
+
+.carrinho-header h2 {
+    margin: 7px 0 0;
+    color: #2C2C2C;
+    font: 700 26px/1.1 'Playfair Display', serif;
+}
+
+.carrinho-fechar {
+    border: 0;
+    background: transparent;
+    color: #666;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.carrinho-fechar:hover { color: #7B2D2D; }
+
+.carrinho-itens { padding: 5px 0; }
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee8e0;
+}
+
+.item-info { flex: 1; }
+
+.item-info h3 {
+    margin: 0 0 6px;
+    color: #2C2C2C;
+    font: 500 13px/1.4 'Poppins', sans-serif;
+}
+
+.item-info strong {
+    color: #7B2D2D;
+    font: 600 13px 'Poppins', sans-serif;
+}
+
+.item-controles {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.item-controles button {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-menos, .btn-mais {
+    background: #F8F6F3;
+    color: #7B2D2D;
+    font-size: 17px;
+}
+
+.btn-menos:hover, .btn-mais:hover {
+    background: #7B2D2D;
+    color: #fff;
+}
+
+.item-controles span {
+    min-width: 18px;
+    text-align: center;
+    color: #2C2C2C;
+    font: 500 13px 'Poppins', sans-serif;
+}
+
+.btn-remover {
+    margin-left: 5px;
+    background: transparent;
+    color: #999;
+    font-size: 12px;
+}
+
+.btn-remover:hover {
+    background: #f5dddd;
+    color: #7B2D2D;
+}
+
+.carrinho-vazio {
+    padding: 48px 10px;
+    text-align: center;
+}
+
+.carrinho-vazio i {
+    color: #7B2D2D;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.carrinho-vazio h3 {
+    margin: 0 0 7px;
+    color: #2C2C2C;
+    font: 700 21px 'Playfair Display', serif;
+}
+
+.carrinho-vazio p {
+    margin: 0;
+    color: #777;
+    font: 12px 'Poppins', sans-serif;
+}
+
+.carrinho-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.carrinho-total span {
+    color: #666;
+    font: 500 14px 'Poppins', sans-serif;
+}
+
+.carrinho-total strong {
+    color: #7B2D2D;
+    font: 700 20px 'Poppins', sans-serif;
+}
+
+.btn-finalizar {
+    width: 100%;
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 28px;
+    background: #7B2D2D;
+    color: #fff;
+    font: 500 13px 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-finalizar:hover { background: #642323; }
+
+@media (max-width: 560px) {
+    .carrinho-caixa {
+        padding: 21px;
+        border-radius: 15px;
+    }
+
+    .item-carrinho {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .item-controles {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
