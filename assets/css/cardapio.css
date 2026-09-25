@@ -616,3 +616,126 @@ body.carrinho-aberto { overflow: hidden; }
         justify-content: flex-end;
     }
 }
+
+
+/* ========================================
+   PAGAMENTO - MODAL
+   ======================================== */
+
+.pagamento-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pagamento-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 15, 15, .58);
+    backdrop-filter: blur(4px);
+}
+
+.pagamento-caixa {
+    position: relative;
+    z-index: 2;
+    width: min(440px, 100%);
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 25px 70px rgba(0,0,0,.28);
+    animation: aparecerPagamento .22s ease;
+}
+
+@keyframes aparecerPagamento {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.pagamento-fechar {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    border: 0;
+    background: transparent;
+    color: #666;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.pagamento-fechar:hover {
+    color: #7B2D2D;
+}
+
+.pagamento-caixa h2 {
+    margin: 0 35px 8px 0;
+    color: #2C2C2C;
+    font: 700 26px/1.1 'Playfair Display', serif;
+}
+
+.pagamento-caixa > p {
+    margin: 0 0 20px;
+    color: #777;
+    font: 12px 'Poppins', sans-serif;
+}
+
+.formas-pagamento {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.formas-pagamento label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 15px;
+    border: 1px solid #eee8e0;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #2C2C2C;
+    font: 500 13px 'Poppins', sans-serif;
+    transition: .2s;
+}
+
+.formas-pagamento label:hover {
+    border-color: #7B2D2D;
+}
+
+.formas-pagamento input {
+    accent-color: #7B2D2D;
+}
+
+.btn-whatsapp {
+    width: 100%;
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 28px;
+    background: #7B2D2D;
+    color: #fff;
+    font: 500 13px 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-whatsapp:hover {
+    background: #642323;
+}
+
+@media (max-width: 560px) {
+    .pagamento-caixa {
+        padding: 21px;
+        border-radius: 15px;
+    }
+}
