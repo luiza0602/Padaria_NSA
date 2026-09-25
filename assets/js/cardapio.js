@@ -192,7 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (finalizar) {
             finalizar.addEventListener('click', () => {
-                alert('Carrinho pronto! A próxima etapa será a finalização do pedido.');
+                fecharCarrinho();
+                abrirPagamento();
             });
         }
     }
@@ -203,13 +204,103 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('carrinho-aberto');
     }
 
+    function abrirPagamento() {
+        const pagamento = document.createElement('div');
+        pagamento.className = 'pagamento-modal';
+
+        pagamento.innerHTML = `
+            <div class="pagamento-overlay"></div>
+
+            <div class="pagamento-caixa">
+                <button class="pagamento-fechar" type="button">×</button>
+
+                <h2>Finalizar pedido</h2>
+                <p>Escolha a forma de pagamento:</p>
+
+                <div class="formas-pagamento">
+                    <label>
+                        <input type="radio" name="pagamento" value="Pix">
+                        <span>Pix</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pagamento" value="Cartão">
+                        <span>Cartão</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pagamento" value="Dinheiro">
+                        <span>Dinheiro</span>
+                    </label>
+                </div>
+
+                <button class="btn-whatsapp" type="button">
+                    Enviar pedido pelo WhatsApp
+                </button>
+            </div>
+        `;
+
+        document.body.appendChild(pagamento);
+
+        pagamento.querySelector('.pagamento-fechar').addEventListener('click', () => {
+            pagamento.remove();
+        });
+
+        pagamento.querySelector('.pagamento-overlay').addEventListener('click', () => {
+            pagamento.remove();
+        });
+
+        pagamento.querySelector('.btn-whatsapp').addEventListener('click', () => {
+            enviarWhatsApp(pagamento);
+        });
+    }
+
+    function enviarWhatsApp(pagamento) {
+        const formaPagamento = pagamento.querySelector(
+            'input[name="pagamento"]:checked'
+        );
+
+        if (!formaPagamento) {
+            alert('Escolha uma forma de pagamento!');
+            return;
+        }
+
+        const numeroWhatsApp = '5516996016977';
+
+        let mensagem = '🥐 *NOVO PEDIDO - PADARIA NSA*\\n\\n';
+        mensagem += '*Pedido:*\\n';
+
+        carrinho.forEach((item) => {
+            const subtotal = item.preco * item.quantidade;
+            mensagem += `${item.quantidade}x ${item.nome} - R$ ${formatarMoeda(subtotal)}\\n`;
+        });
+
+        const total = carrinho.reduce(
+            (soma, item) => soma + item.preco * item.quantidade,
+            0
+        );
+
+        mensagem += `\\n*Total: R$ ${formatarMoeda(total)}*\\n`;
+        mensagem += `*Pagamento: ${formaPagamento.value}*`;
+
+        const linkWhatsApp =
+            `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+        window.open(linkWhatsApp, '_blank');
+    }
+
     function formatarMoeda(valor) {
         return valor.toFixed(2).replace('.', ',');
     }
 
     // ESC FECHA O CARRINHO
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') fecharCarrinho();
+        if (e.key === 'Escape') {
+            fecharCarrinho();
+
+            const pagamento = document.querySelector('.pagamento-modal');
+            if (pagamento) pagamento.remove();
+        }
     });
 
     atualizarContador();
