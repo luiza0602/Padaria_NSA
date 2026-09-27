@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
             0
         );
 
-        pagamento.innerHTML = \`
+        pagamento.innerHTML = `
             <div class="pagamento-overlay"></div>
             <div class="pagamento-caixa" role="dialog" aria-modal="true">
                 <button class="pagamento-fechar" type="button" aria-label="Fechar">×</button>
@@ -285,10 +285,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="pagamento-resumo">
                     <span>Total do pedido</span>
-                    <strong>R$ \${formatarMoeda(total)}</strong>
+                    <strong>R$ ${formatarMoeda(total)}</strong>
                 </div>
             </div>
-        \`;
+        `;
 
         document.body.appendChild(pagamento);
 
