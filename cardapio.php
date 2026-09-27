@@ -498,6 +498,7 @@
     </footer>
 
 
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
     <script src="assets/js/cardapio.js"></script>
 
 </body>
