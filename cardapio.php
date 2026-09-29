@@ -130,7 +130,7 @@
 
             <!-- ===== LANCHES ===== -->
 
-            <article class="produto mostrar" data-categoria="lanches">
+            <article class="produto" data-categoria="lanches">
                 <img src="assets/img/produto1.jpg" alt="Americano de Presunto">
                 <div class="produto-info">
                     <h2>Americano de Presunto</h2>
@@ -142,7 +142,7 @@
                 </div>
             </article>
 
-            <article class="produto mostrar" data-categoria="lanches">
+            <article class="produto" data-categoria="lanches">
                 <img src="assets/img/produto2.jpg" alt="Lanche Frio - Pão com Mortadela">
                 <div class="produto-info">
                     <h2>Lanche Frio - Pão com Mortadela</h2>
@@ -154,7 +154,7 @@
                 </div>
             </article>
 
-            <article class="produto mostrar" data-categoria="lanches">
+            <article class="produto" data-categoria="lanches">
                 <img src="assets/img/produto3.jpg" alt="Lanche Frio - Peito de Peru">
                 <div class="produto-info">
                     <h2>Lanche Frio - Peito de Peru</h2>
@@ -166,7 +166,7 @@
                 </div>
             </article>
 
-            <article class="produto mostrar" data-categoria="lanches">
+            <article class="produto" data-categoria="lanches">
                 <img src="assets/img/produto4.jpg" alt="Misto Quente">
                 <div class="produto-info">
                     <h2>Misto Quente</h2>
@@ -178,7 +178,7 @@
                 </div>
             </article>
 
-            <article class="produto mostrar" data-categoria="lanches">
+            <article class="produto" data-categoria="lanches">
                 <img src="assets/img/produto1.jpg" alt="Croissant Presunto e Queijo">
                 <div class="produto-info">
                     <h2>Croissant Presunto e Queijo</h2>
@@ -190,7 +190,7 @@
                 </div>
             </article>
 
-            <article class="produto mostrar" data-categoria="lanches">
+            <article class="produto" data-categoria="lanches">
                 <img src="assets/img/produto2.jpg" alt="Croissant Cheddar e Bacon">
                 <div class="produto-info">
                     <h2>Croissant Cheddar e Bacon</h2>
