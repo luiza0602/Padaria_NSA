@@ -204,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('carrinho-aberto');
     }
 
+    // FLUXO DE PAGAMENTO
     function abrirPagamento() {
         const pagamento = document.createElement('div');
         pagamento.className = 'pagamento-modal';
@@ -215,24 +216,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         pagamento.innerHTML = `
             <div class="pagamento-overlay"></div>
+
             <div class="pagamento-caixa" role="dialog" aria-modal="true">
                 <button class="pagamento-fechar" type="button" aria-label="Fechar">×</button>
 
                 <div class="pagamento-etapa" data-etapa="escolha">
                     <span class="pagamento-subtitulo">FINALIZAR PEDIDO</span>
                     <h2>Como você quer pagar?</h2>
-                    <p>Escolha quando e onde o pagamento será realizado.</p>
+                    <p>Escolha uma forma de pagamento para continuar.</p>
 
                     <div class="opcoes-principais">
                         <button class="opcao-pagamento" data-tipo="retirada" type="button">
                             <i class="fa-solid fa-store"></i>
-                            <span><strong>Pagar na retirada</strong><small>Dinheiro ou cartão</small></span>
+                            <span>
+                                <strong>Pagar na retirada</strong>
+                                <small>Dinheiro ou cartão</small>
+                            </span>
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
 
                         <button class="opcao-pagamento" data-tipo="site" type="button">
                             <i class="fa-solid fa-credit-card"></i>
-                            <span><strong>Pagar no site</strong><small>Cartão ou Pix</small></span>
+                            <span>
+                                <strong>Pagar no site</strong>
+                                <small>Cartão ou Pix</small>
+                            </span>
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
@@ -242,45 +250,50 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="voltar-pagamento" type="button">← Voltar</button>
                     <span class="pagamento-subtitulo">PAGAMENTO NA RETIRADA</span>
                     <h2>Como você vai pagar?</h2>
-                    <p>O pagamento será feito quando você retirar o pedido.</p>
+                    <p>Escolha uma das opções abaixo.</p>
 
                     <div class="formas-pagamento">
                         <label>
                             <input type="radio" name="pagamento-retirada" value="Dinheiro">
                             <span><i class="fa-solid fa-money-bill-wave"></i> Dinheiro</span>
                         </label>
+
                         <label>
                             <input type="radio" name="pagamento-retirada" value="Cartão">
                             <span><i class="fa-solid fa-credit-card"></i> Cartão</span>
                         </label>
                     </div>
 
-                    <button class="btn-whatsapp btn-confirmar-retirada" type="button">Confirmar pedido</button>
+                    <button class="btn-whatsapp btn-confirmar-retirada" type="button">
+                        Confirmar pedido
+                    </button>
                 </div>
 
                 <div class="pagamento-etapa" data-etapa="site" hidden>
                     <button class="voltar-pagamento" type="button">← Voltar</button>
                     <span class="pagamento-subtitulo">PAGAMENTO ONLINE</span>
-                    <h2>Pagamento pelo site</h2>
-                    <p>Escolha cartão ou Pix. O pagamento será processado com segurança pelo Mercado Pago.</p>
+                    <h2>Escolha a forma de pagamento</h2>
+                    <p>Selecione cartão ou Pix para continuar.</p>
 
                     <div class="formas-online">
                         <button class="forma-online" data-online="cartao" type="button">
                             <i class="fa-solid fa-credit-card"></i>
-                            <span><strong>Cartão</strong><small>Crédito ou débito</small></span>
+                            <span>
+                                <strong>Cartão</strong>
+                                <small>Crédito ou débito</small>
+                            </span>
                         </button>
+
                         <button class="forma-online" data-online="pix" type="button">
                             <i class="fa-brands fa-pix"></i>
-                            <span><strong>Pix</strong><small>QR Code ou copia e cola</small></span>
+                            <span>
+                                <strong>Pix</strong>
+                                <small>Pagamento via Pix</small>
+                            </span>
                         </button>
                     </div>
 
-                    <div class="payment-brick-area" hidden>
-                        <button class="voltar-pagamento voltar-online" type="button">← Escolher outra forma</button>
-                        <div id="paymentBrick_container"></div>
-                    </div>
-
-                    <div class="pix-resultado" hidden></div>
+                    <div class="pagamento-online-form" hidden></div>
                 </div>
 
                 <div class="pagamento-resumo">
@@ -293,10 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(pagamento);
 
         const fechar = () => {
-            if (window.paymentBrickController) {
-                try { window.paymentBrickController.unmount(); } catch (e) {}
-                window.paymentBrickController = null;
-            }
             pagamento.remove();
         };
 
@@ -315,15 +324,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         pagamento.querySelectorAll('.voltar-pagamento').forEach((botao) => {
             botao.addEventListener('click', () => {
-                if (window.paymentBrickController) {
-                    try { window.paymentBrickController.unmount(); } catch (e) {}
-                    window.paymentBrickController = null;
-                }
-
-                pagamento.querySelector('.payment-brick-area').hidden = true;
-                pagamento.querySelector('.pix-resultado').hidden = true;
+                pagamento.querySelector('.pagamento-online-form').hidden = true;
                 pagamento.querySelector('.formas-online').hidden = false;
-                mostrarEtapa(botao.classList.contains('voltar-online') ? 'site' : 'escolha');
+                mostrarEtapa('escolha');
             });
         });
 
@@ -340,174 +343,169 @@ document.addEventListener('DOMContentLoaded', () => {
                 statusPagamento: 'Pagamento na retirada'
             });
 
-            fechar();
             carrinho = [];
             atualizarContador();
+            fechar();
         });
 
         pagamento.querySelectorAll('.forma-online').forEach((botao) => {
             botao.addEventListener('click', () => {
                 pagamento.querySelector('.formas-online').hidden = true;
-                pagamento.querySelector('.payment-brick-area').hidden = false;
-                renderizarMercadoPago(pagamento, botao.dataset.online);
+                const formulario = pagamento.querySelector('.pagamento-online-form');
+                formulario.hidden = false;
+                renderizarFormularioOnline(formulario, botao.dataset.online, pagamento);
             });
         });
     }
 
-    async function renderizarMercadoPago(pagamento, formaEscolhida) {
-        const publicKey = 'COLOQUE_SUA_PUBLIC_KEY_AQUI';
+    function renderizarFormularioOnline(area, forma, pagamento) {
+        if (forma === 'cartao') {
+            area.innerHTML = `
+                <button class="voltar-pagamento voltar-online" type="button">← Escolher outra forma</button>
 
-        if (!window.MercadoPago) {
-            alert('O Mercado Pago não foi carregado. Verifique a conexão com a internet.');
-            return;
-        }
+                <div class="pagamento-formulario">
+                    <span class="pagamento-subtitulo">PAGAMENTO COM CARTÃO</span>
+                    <h3>Dados do cartão</h3>
 
-        if (publicKey === 'COLOQUE_SUA_PUBLIC_KEY_AQUI') {
-            alert('Configure sua Public Key do Mercado Pago no arquivo assets/js/cardapio.js.');
-            return;
-        }
+                    <label>Número do cartão
+                        <input class="campo-pagamento" type="text" inputmode="numeric"
+                            maxlength="19" placeholder="0000 0000 0000 0000">
+                    </label>
 
-        if (window.paymentBrickController) {
-            try { window.paymentBrickController.unmount(); } catch (e) {}
-        }
+                    <label>Nome no cartão
+                        <input class="campo-pagamento" type="text" placeholder="Nome completo">
+                    </label>
 
-        const total = carrinho.reduce(
-            (soma, item) => soma + item.preco * item.quantidade,
-            0
-        );
+                    <div class="campos-duplos">
+                        <label>Validade
+                            <input class="campo-pagamento" type="text" inputmode="numeric"
+                                maxlength="5" placeholder="MM/AA">
+                        </label>
 
-        const mp = new MercadoPago(publicKey, { locale: 'pt-BR' });
-        const bricksBuilder = mp.bricks();
+                        <label>CVV
+                            <input class="campo-pagamento" type="password" inputmode="numeric"
+                                maxlength="4" placeholder="123">
+                        </label>
+                    </div>
 
-        const paymentMethods = formaEscolhida === 'pix'
-            ? { bankTransfer: 'all' }
-            : { creditCard: 'all', debitCard: 'all' };
+                    <button class="btn-pagar-online" type="button">Finalizar pagamento</button>
+                </div>
+            `;
 
-        const settings = {
-            initialization: {
-                amount: Number(total.toFixed(2))
-            },
-            customization: {
-                paymentMethods
-            },
-            callbacks: {
-                onReady: () => {},
-                onError: (error) => console.error('Mercado Pago:', error),
-                onSubmit: async ({ selectedPaymentMethod, formData }) => {
-                    try {
-                        const response = await fetch('process_payment.php', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({
-                                ...formData,
-                                transaction_amount: Number(total.toFixed(2))
-                            })
-                        });
+            area.querySelector('.voltar-online').addEventListener('click', () => {
+                area.hidden = true;
+                pagamento.querySelector('.formas-online').hidden = false;
+            });
 
-                        const resultado = await response.json();
+            area.querySelector('.btn-pagar-online').addEventListener('click', () => {
+                const campos = [...area.querySelectorAll('.campo-pagamento')];
+                const preenchidos = campos.every(campo => campo.value.trim() !== '');
 
-                        if (!response.ok) {
-                            throw new Error(resultado.error || 'Erro ao processar pagamento.');
-                        }
-
-                        if (resultado.status === 'approved') {
-                            enviarWhatsApp({
-                                formaPagamento: selectedPaymentMethod === 'pix'
-                                    ? 'Pix (pago online)'
-                                    : 'Cartão (pago online)',
-                                statusPagamento: 'Pagamento aprovado'
-                            });
-
-                            mostrarSucessoPagamento(
-                                pagamento,
-                                'Pagamento aprovado!',
-                                'Seu pedido foi confirmado.'
-                            );
-
-                            carrinho = [];
-                            atualizarContador();
-                        } else if (resultado.status === 'pending' && resultado.pix) {
-                            mostrarPix(pagamento, resultado.pix);
-                        } else {
-                            mostrarSucessoPagamento(
-                                pagamento,
-                                'Pagamento em análise',
-                                'O pedido foi criado, mas o pagamento ainda não foi aprovado.'
-                            );
-                        }
-                    } catch (erro) {
-                        console.error(erro);
-                        alert(erro.message || 'Não foi possível processar o pagamento.');
-                    }
+                if (!preenchidos) {
+                    alert('Preencha todos os dados do cartão.');
+                    return;
                 }
-            }
-        };
 
-        window.paymentBrickController = await bricksBuilder.create(
-            'payment',
-            'paymentBrick_container',
-            settings
-        );
+                mostrarSucessoPagamento(pagamento, 'Pagamento aprovado!', 'Seu pedido foi confirmado.');
+                enviarWhatsApp({
+                    formaPagamento: 'Cartão (online)',
+                    statusPagamento: 'Pagamento aprovado'
+                });
+
+                carrinho = [];
+                atualizarContador();
+            });
+        } else {
+            const codigoPix = gerarCodigoPix();
+            area.innerHTML = `
+                <button class="voltar-pagamento voltar-online" type="button">← Escolher outra forma</button>
+
+                <div class="pix-confirmacao">
+                    <span class="pagamento-subtitulo">PAGAMENTO VIA PIX</span>
+                    <h3>Faça o pagamento</h3>
+
+                    <div class="pix-simulado">
+                        <i class="fa-brands fa-pix"></i>
+                        <strong>PIX</strong>
+                    </div>
+
+                    <p>Valor do pedido: <strong>R$ ${formatarMoeda(
+                        carrinho.reduce((soma, item) => soma + item.preco * item.quantidade, 0)
+                    )}</strong></p>
+
+                    <div class="pix-copia">
+                        <input type="text" value="${codigoPix}" readonly>
+                        <button type="button" class="btn-copiar-pix">Copiar</button>
+                    </div>
+
+                    <button class="btn-pagar-online btn-confirmar-pix" type="button">
+                        Confirmar pagamento
+                    </button>
+                </div>
+            `;
+
+            area.querySelector('.voltar-online').addEventListener('click', () => {
+                area.hidden = true;
+                pagamento.querySelector('.formas-online').hidden = false;
+            });
+
+            area.querySelector('.btn-copiar-pix').addEventListener('click', async () => {
+                const campo = area.querySelector('input');
+
+                try {
+                    await navigator.clipboard.writeText(campo.value);
+                } catch (e) {
+                    campo.select();
+                    document.execCommand('copy');
+                }
+
+                area.querySelector('.btn-copiar-pix').textContent = 'Copiado!';
+            });
+
+            area.querySelector('.btn-confirmar-pix').addEventListener('click', () => {
+                mostrarSucessoPagamento(pagamento, 'Pagamento aprovado!', 'Seu pedido foi confirmado.');
+                enviarWhatsApp({
+                    formaPagamento: 'Pix (online)',
+                    statusPagamento: 'Pagamento aprovado'
+                });
+
+                carrinho = [];
+                atualizarContador();
+            });
+        }
     }
 
-    function mostrarPix(pagamento, pix) {
-        const area = pagamento.querySelector('.pix-resultado');
-        const brickArea = pagamento.querySelector('.payment-brick-area');
+    function gerarCodigoPix() {
+        const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let codigo = 'PADARIA.NSA.PIX.';
 
-        if (brickArea) brickArea.hidden = true;
-        if (!area) return;
+        for (let i = 0; i < 20; i++) {
+            codigo += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+        }
 
-        area.hidden = false;
-
-        const imagem = pix.qr_code_base64
-            ? '<img src="data:image/png;base64,' + pix.qr_code_base64 + '" alt="QR Code Pix" class="pix-qr-code">'
-            : '';
-
-        area.innerHTML =
-            '<div class="pix-confirmacao">' +
-                '<span class="pagamento-subtitulo">PAGAMENTO VIA PIX</span>' +
-                '<h3>Escaneie o QR Code</h3>' +
-                imagem +
-                '<p>Ou copie o código Pix abaixo:</p>' +
-                '<div class="pix-copia">' +
-                    '<input type="text" value="' + (pix.qr_code || '') + '" readonly>' +
-                    '<button type="button" class="btn-copiar-pix">Copiar</button>' +
-                '</div>' +
-                '<p class="pix-aviso">Depois de pagar, o pedido continuará registrado como aguardando confirmação do pagamento.</p>' +
-            '</div>';
-
-        area.querySelector('.btn-copiar-pix').addEventListener('click', async () => {
-            const campo = area.querySelector('input');
-            try {
-                await navigator.clipboard.writeText(campo.value);
-                area.querySelector('.btn-copiar-pix').textContent = 'Copiado!';
-            } catch (e) {
-                campo.select();
-                document.execCommand('copy');
-            }
-        });
-
-        enviarWhatsApp({
-            formaPagamento: 'Pix (online)',
-            statusPagamento: 'Aguardando confirmação do pagamento'
-        });
+        return codigo;
     }
 
     function mostrarSucessoPagamento(pagamento, titulo, texto) {
         const etapa = pagamento.querySelector('[data-etapa="site"]');
 
-        etapa.innerHTML =
-            '<div class="pagamento-sucesso">' +
-                '<i class="fa-solid fa-circle-check"></i>' +
-                '<h2>' + titulo + '</h2>' +
-                '<p>' + texto + '</p>' +
-                '<button type="button" class="btn-whatsapp" id="fechar-sucesso-pagamento">Fechar</button>' +
-            '</div>';
+        etapa.innerHTML = `
+            <div class="pagamento-sucesso">
+                <i class="fa-solid fa-circle-check"></i>
+                <h2>${titulo}</h2>
+                <p>${texto}</p>
+                <button type="button" class="btn-whatsapp" id="fechar-sucesso-pagamento">
+                    Fechar
+                </button>
+            </div>
+        `;
 
         etapa.hidden = false;
 
         const btn = etapa.querySelector('#fechar-sucesso-pagamento');
-        if (btn) btn.addEventListener('click', () => pagamento.remove());
+        if (btn) {
+            btn.addEventListener('click', () => pagamento.remove());
+        }
     }
 
     function enviarWhatsApp({ formaPagamento, statusPagamento }) {
@@ -541,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return valor.toFixed(2).replace('.', ',');
     }
 
-    // ESC FECHA O CARRINHO
+    // ESC FECHA O CARRINHO E O PAGAMENTO
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             fecharCarrinho();
