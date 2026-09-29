@@ -928,3 +928,110 @@ body.carrinho-aberto { overflow: hidden; }
         padding: 10px;
     }
 }
+
+
+/* ===== PAGAMENTO ONLINE ===== */
+
+.pagamento-online-form {
+    margin-top: 18px;
+}
+
+.pagamento-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pagamento-formulario h3 {
+    margin: 2px 0 3px;
+    color: #2C2C2C;
+    font: 700 21px 'Playfair Display', serif;
+}
+
+.pagamento-formulario label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #555;
+    font: 600 11px 'Poppins', sans-serif;
+}
+
+.campo-pagamento {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 13px;
+    border: 1px solid #e7dfd6;
+    border-radius: 9px;
+    background: #fff;
+    color: #333;
+    font: 400 12px 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.campo-pagamento:focus {
+    border-color: #7B2D2D;
+    box-shadow: 0 0 0 3px rgba(123, 45, 45, .08);
+}
+
+.campos-duplos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn-pagar-online {
+    width: 100%;
+    border: 0;
+    border-radius: 9px;
+    padding: 12px 16px;
+    background: #7B2D2D;
+    color: #fff;
+    cursor: pointer;
+    font: 600 12px 'Poppins', sans-serif;
+    transition: transform .2s, opacity .2s;
+}
+
+.btn-pagar-online:hover {
+    opacity: .92;
+    transform: translateY(-1px);
+}
+
+.pix-simulado {
+    width: 125px;
+    height: 125px;
+    margin: 12px auto 16px;
+    border: 7px solid #fff;
+    outline: 1px solid #e7dfd6;
+    border-radius: 10px;
+    background:
+        linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%),
+        linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%);
+    background-size: 18px 18px;
+    background-position: 0 0, 9px 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #222;
+}
+
+.pix-simulado i {
+    font-size: 27px;
+}
+
+.pix-simulado strong {
+    font: 700 11px 'Poppins', sans-serif;
+}
+
+@media (max-width: 560px) {
+    .campos-duplos {
+        grid-template-columns: 1fr;
+    }
+
+    .pix-simulado {
+        width: 110px;
+        height: 110px;
+    }
+}
