@@ -204,8 +204,8 @@
 
 
             
-            <article class="produto" data-categoria="lanches">
-                <img src="assets/img/produto1.jpg" alt="Lanche Frio - Pão com Presunto e Queijo Simples">
+            <article class="produto mostrar" data-categoria="lanches">
+                <img src="assets/img/LANCHE FRIO - PÃO COM MORTADELA SIMPLES.jpg" alt="Lanche Frio - Pão com Presunto e Queijo Simples">
                 <div class="produto-info">
                     <h2>Lanche Frio - Pão com Presunto e Queijo Simples</h2>
                     <p>Pão fresquinho recheado com presunto e queijo, em uma combinação simples e tradicional.</p>
@@ -216,7 +216,7 @@
                 </div>
             </article>
 
-            <article class="produto" data-categoria="lanches">
+            <article class="produto mostrar" data-categoria="lanches">
                 <img src="assets/img/produto2.jpg" alt="Lanches Quentes - Salame com Mussarela">
                 <div class="produto-info">
                     <h2>Lanches Quentes - Salame com Mussarela</h2>
@@ -228,7 +228,7 @@
                 </div>
             </article>
 
-            <article class="produto" data-categoria="lanches">
+            <article class="produto mostrar" data-categoria="lanches">
                 <img src="assets/img/produto3.jpg" alt="Lanches Quentes - Misto Cremoso">
                 <div class="produto-info">
                     <h2>Lanches Quentes - Misto Cremoso</h2>
@@ -240,7 +240,7 @@
                 </div>
             </article>
 
-            <article class="produto" data-categoria="lanches">
+            <article class="produto mostrar" data-categoria="lanches">
                 <img src="assets/img/produto4.jpg" alt="Lanches Quentes - Misto Mineiro">
                 <div class="produto-info">
                     <h2>Lanches Quentes - Misto Mineiro</h2>
@@ -252,7 +252,7 @@
                 </div>
             </article>
 
-            <article class="produto" data-categoria="lanches">
+            <article class="produto mostrar" data-categoria="lanches">
                 <img src="assets/img/produto1.jpg" alt="Lanches Quentes - Pão com Ovo">
                 <div class="produto-info">
                     <h2>Lanches Quentes - Pão com Ovo</h2>
@@ -264,7 +264,7 @@
                 </div>
             </article>
 
-            <article class="produto" data-categoria="lanches">
+            <article class="produto mostrar" data-categoria="lanches">
                 <img src="assets/img/produto2.jpg" alt="Lanches Quentes - Peito de Peru com Mussarela">
                 <div class="produto-info">
                     <h2>Lanches Quentes - Peito de Peru com Mussarela</h2>
@@ -278,20 +278,10 @@
 
 <!-- ===== DOCES ===== -->
 
-            <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto3.jpg" alt="Chocolate Cremoso Tradicional">
-                <div class="produto-info">
-                    <h2>Chocolate Cremoso Tradicional</h2>
-                    <p>Chocolate quente cremoso, feito com achocolatado especial e um toque de canela.</p>
-                    <div class="produto-footer">
-                        <strong>R$ 11,00</strong>
-                        <button>Adicionar</button>
-                    </div>
-                </div>
-            </article>
+
 
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto4.jpg" alt="Chocolate Gelado Avelã">
+                <img src="assets/img/CHOCOLATE GELADO - AVELÃ.jpg" alt="Chocolate Gelado Avelã">
                 <div class="produto-info">
                     <h2>Chocolate Gelado Avelã</h2>
                     <p>A combinação irresistível de chocolate gelado com creme cremoso e avelã.</p>
@@ -303,7 +293,7 @@
             </article>
 
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto1.jpg" alt="Chocolate Quente Nutella">
+                <img src="assets/img/CHOCOLATE QUENTE - NUTELLA.jpg" alt="Chocolate Quente Nutella">
                 <div class="produto-info">
                     <h2>Chocolate Quente Nutella</h2>
                     <p>Chocolate cremoso derretido com baunilha para os verdadeiros amantes de chocolate.</p>
@@ -315,7 +305,7 @@
             </article>
 
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto2.jpg" alt="Chocolate Gelado Tradicional">
+                <img src="assets/img/CHOCOLATE GELADO - TRADICIONAL.jpg" alt="Chocolate Gelado Tradicional">
                 <div class="produto-info">
                     <h2>Chocolate Gelado Tradicional</h2>
                     <p>O equilíbrio perfeito entre o cacau intenso e o leite bem cremoso.</p>
@@ -327,7 +317,7 @@
             </article>
 
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto3.jpg" alt="Chocolate Gelado Nutella">
+                <img src="assets/img/CHOCOLATE GELADO NUTELLA.jpg" alt="Chocolate Gelado Nutella">
                 <div class="produto-info">
                     <h2>Chocolate Gelado Nutella</h2>
                     <p>Chocolate cremoso, gelado com nutella, perfeito para os dias mais quentes.</p>
@@ -339,7 +329,7 @@
             </article>
 
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto4.jpg" alt="Chocolate Quente Avelã">
+                <img src="assets/img/CHOCOLATE QUENTE - AVELÃ.jpg" alt="Chocolate Quente Avelã">
                 <div class="produto-info">
                     <h2>Chocolate Quente Avelã</h2>
                     <p>Receita clássica com creme de avelã, gostinho de infância em cada gole.</p>
@@ -353,7 +343,7 @@
 
             
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto1.jpg" alt="Chocolate Cremoso Tradicional Quente">
+                <img src="assets/img/CHOCOLATE CREMOSO - TRADICIONAL - QUENTE.jpg" alt="Chocolate Cremoso Tradicional Quente">
                 <div class="produto-info">
                     <h2>Chocolate Cremoso Tradicional Quente</h2>
                     <p>Chocolate quente cremoso e tradicional, perfeito para acompanhar um doce.</p>
@@ -365,7 +355,7 @@
             </article>
 
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto2.jpg" alt="Chocolate Gelado - Avelã">
+                <img src="assets/img/CHOCOLATE GELADO - AVELÃ.jpg" alt="Chocolate Gelado - Avelã">
                 <div class="produto-info">
                     <h2>Chocolate Gelado - Avelã</h2>
                     <p>Chocolate gelado cremoso com sabor de avelã.</p>
@@ -376,20 +366,10 @@
                 </div>
             </article>
 
-            <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto3.jpg" alt="Chocolate Gelado - Nutella">
-                <div class="produto-info">
-                    <h2>Chocolate Gelado - Nutella</h2>
-                    <p>Chocolate gelado cremoso com Nutella.</p>
-                    <div class="produto-footer">
-                        <strong>R$ 8,90</strong>
-                        <button>Adicionar</button>
-                    </div>
-                </div>
-            </article>
+          
 
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto4.jpg" alt="Chocolate Gelado Tradicional e Avelã">
+                <img src="assets/img/CHOCOLATE GELADO TRADICIONAL E AVELÃ.jpg" alt="Chocolate Gelado Tradicional e Avelã">
                 <div class="produto-info">
                     <h2>Chocolate Gelado Tradicional e Avelã</h2>
                     <p>Chocolate gelado tradicional combinado com o sabor de avelã.</p>
@@ -401,7 +381,7 @@
             </article>
 
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto1.jpg" alt="Chocolate Quente - Tradicional">
+                <img src="assets/img/CHOCOLATE QUENTE - TRADICIONAL.jpg" alt="Chocolate Quente - Tradicional">
                 <div class="produto-info">
                     <h2>Chocolate Quente - Tradicional</h2>
                     <p>Chocolate quente tradicional, cremoso e servido bem quentinho.</p>
@@ -412,8 +392,32 @@
                 </div>
             </article>
 
+  <article class="produto" data-categoria="doces">
+                <img src="assets/img/CHOCOLATE GELADO - NUTELLA.jpg" alt="Chocolate Gelado - Nutella">
+                <div class="produto-info">
+                    <h2>Chocolate Gelado - Nutella</h2>
+                    <p>Chocolate gelado cremoso com Nutella.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 8,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/produto2.jpg" alt="Mini Bolo Vulcão Cenoura">
+                <img src="assets/img/GELADIS TAÇA PROFITEROLES.jpg" alt="Chocolate Cremoso Tradicional">
+                <div class="produto-info">
+                    <h2>GELADIS TAÇA PROFITEROLESl</h2>
+                    <p>Chocolate quente cremoso, feito com achocolatado especial e um toque de canela.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 11,00</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="doces">
+                <img src="assets/img/MINI BOLO VULCÃO CENOURA.jpg" alt="Mini Bolo Vulcão Cenoura">
                 <div class="produto-info">
                     <h2>Mini Bolo Vulcão Cenoura</h2>
                     <p>Mini bolo de cenoura com cobertura cremosa de chocolate.</p>
