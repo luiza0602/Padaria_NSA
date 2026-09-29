@@ -89,7 +89,7 @@
             </h1>
 
             <p>
-                Pães fresquinhos, feitos com amor e tradição.
+                Lanches fresquinhos, feitos com amor e tradição.
                 Ingredientes selecionados para momentos especiais.
             </p>
 
@@ -105,8 +105,8 @@
 
         <nav class="categorias" id="categorias">
 
-            <a href="#" class="categoria ativa" data-categoria="paes">
-                Pães
+            <a href="#" class="categoria ativa" data-categoria="lanches">
+                Lanches
             </a>
 
             <a href="#" class="categoria" data-categoria="doces">
@@ -128,9 +128,9 @@
 
         <section class="produtos" id="produtos">
 
-            <!-- ===== PÃES ===== -->
+            <!-- ===== LANCHES ===== -->
 
-            <article class="produto mostrar" data-categoria="paes">
+            <article class="produto mostrar" data-categoria="lanches">
                 <img src="assets/img/produto1.jpg" alt="Americano de Presunto">
                 <div class="produto-info">
                     <h2>Americano de Presunto</h2>
@@ -203,7 +203,80 @@
             </article>
 
 
-            <!-- ===== DOCES ===== -->
+            
+            <article class="produto" data-categoria="lanches">
+                <img src="assets/img/produto1.jpg" alt="Bauru">
+                <div class="produto-info">
+                    <h2>Bauru</h2>
+                    <p>Pão macio recheado com presunto, queijo, tomate e um toque especial.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 10,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="lanches">
+                <img src="assets/img/produto2.jpg" alt="Sanduíche Natural">
+                <div class="produto-info">
+                    <h2>Sanduíche Natural</h2>
+                    <p>Pão integral com frango desfiado, cenoura, alface e creme especial.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 12,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="lanches">
+                <img src="assets/img/produto3.jpg" alt="Pão na Chapa">
+                <div class="produto-info">
+                    <h2>Pão na Chapa</h2>
+                    <p>Pão fresquinho dourado na chapa com manteiga cremosa.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 6,50</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="lanches">
+                <img src="assets/img/produto4.jpg" alt="Croissant de Presunto e Queijo">
+                <div class="produto-info">
+                    <h2>Croissant de Presunto e Queijo</h2>
+                    <p>Croissant amanteigado recheado com presunto e queijo derretido.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 13,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="lanches">
+                <img src="assets/img/produto1.jpg" alt="Sanduíche de Frango">
+                <div class="produto-info">
+                    <h2>Sanduíche de Frango</h2>
+                    <p>Frango desfiado temperado, queijo, alface e molho da casa.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 14,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="lanches">
+                <img src="assets/img/produto2.jpg" alt="Misto Quente Especial">
+                <div class="produto-info">
+                    <h2>Misto Quente Especial</h2>
+                    <p>Presunto e queijo derretidos no pão dourado, servido quentinho.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 11,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+<!-- ===== DOCES ===== -->
 
             <article class="produto" data-categoria="doces">
                 <img src="assets/img/produto3.jpg" alt="Chocolate Cremoso Tradicional">
@@ -278,7 +351,80 @@
             </article>
 
 
-            <!-- ===== BEBIDAS ===== -->
+            
+            <article class="produto" data-categoria="doces">
+                <img src="assets/img/produto1.jpg" alt="Brownie">
+                <div class="produto-info">
+                    <h2>Brownie</h2>
+                    <p>Brownie de chocolate macio por dentro e levemente crocante por fora.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 9,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="doces">
+                <img src="assets/img/produto2.jpg" alt="Brigadeiro">
+                <div class="produto-info">
+                    <h2>Brigadeiro</h2>
+                    <p>Brigadeiro artesanal cremoso, feito com chocolate e leite condensado.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 4,50</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="doces">
+                <img src="assets/img/produto3.jpg" alt="Pudim">
+                <div class="produto-info">
+                    <h2>Pudim</h2>
+                    <p>Pudim de leite cremoso com calda de caramelo.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 8,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="doces">
+                <img src="assets/img/produto4.jpg" alt="Cheesecake">
+                <div class="produto-info">
+                    <h2>Cheesecake</h2>
+                    <p>Cheesecake cremoso com base crocante e cobertura especial.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 12,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="doces">
+                <img src="assets/img/produto1.jpg" alt="Torta de Limão">
+                <div class="produto-info">
+                    <h2>Torta de Limão</h2>
+                    <p>Massa crocante, creme de limão e cobertura delicadamente doce.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 10,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="doces">
+                <img src="assets/img/produto2.jpg" alt="Sonho Recheado">
+                <div class="produto-info">
+                    <h2>Sonho Recheado</h2>
+                    <p>Massa fofinha recheada com creme e finalizada com açúcar.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 7,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+<!-- ===== BEBIDAS ===== -->
 
             <article class="produto" data-categoria="bebidas">
                 <img src="assets/img/SUCO ACEROLA.jpg" alt="Suco de Acerola">
@@ -353,7 +499,80 @@
             </article>
 
 
-            <!-- ===== CAFETERIA ===== -->
+            
+            <article class="produto" data-categoria="bebidas">
+                <img src="assets/img/SUCO LARANJA.jpg" alt="Suco de Morango">
+                <div class="produto-info">
+                    <h2>Suco de Morango</h2>
+                    <p>Suco refrescante preparado com morangos selecionados.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 9,00</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="bebidas">
+                <img src="assets/img/SUCO ABACAXI.jpg" alt="Limonada">
+                <div class="produto-info">
+                    <h2>Limonada</h2>
+                    <p>Limonada natural, leve e refrescante, servida bem gelada.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 7,50</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="bebidas">
+                <img src="assets/img/SUCO CUPUAÇU.jpg" alt="Chá Gelado">
+                <div class="produto-info">
+                    <h2>Chá Gelado</h2>
+                    <p>Chá gelado e refrescante com um toque especial da casa.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 7,00</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="bebidas">
+                <img src="assets/img/SUCO DE CAJU.jpg" alt="Chocolate Gelado">
+                <div class="produto-info">
+                    <h2>Chocolate Gelado</h2>
+                    <p>Chocolate cremoso servido gelado, perfeito para dias quentes.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 10,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="bebidas">
+                <img src="assets/img/SUCO FRUTAS VERMELHAS.jpg" alt="Vitamina de Banana">
+                <div class="produto-info">
+                    <h2>Vitamina de Banana</h2>
+                    <p>Vitamina cremosa de banana preparada na hora.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 11,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="bebidas">
+                <img src="assets/img/SUCO ACEROLA.jpg" alt="Suco de Laranja com Cenoura">
+                <div class="produto-info">
+                    <h2>Suco de Laranja com Cenoura</h2>
+                    <p>Combinação refrescante de laranja e cenoura, preparada na hora.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 11,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+<!-- ===== CAFETERIA ===== -->
 
             <article class="produto" data-categoria="cafeteria">
                 <img src="assets/img/produto3.jpg" alt="Fondue de Chocolate - Banana">
@@ -427,7 +646,83 @@
                 </div>
             </article>
 
+
+            <article class="produto" data-categoria="cafeteria">
+                <img src="assets/img/produto1.jpg" alt="Café Expresso">
+                <div class="produto-info">
+                    <h2>Café Expresso</h2>
+                    <p>Café intenso e aromático, preparado na hora.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 5,00</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="cafeteria">
+                <img src="assets/img/produto2.jpg" alt="Café com Leite">
+                <div class="produto-info">
+                    <h2>Café com Leite</h2>
+                    <p>Café equilibrado com leite cremoso e espuma delicada.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 6,50</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="cafeteria">
+                <img src="assets/img/produto3.jpg" alt="Cappuccino">
+                <div class="produto-info">
+                    <h2>Cappuccino</h2>
+                    <p>Café cremoso com leite vaporizado e toque de canela.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 9,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="cafeteria">
+                <img src="assets/img/produto4.jpg" alt="Mocha">
+                <div class="produto-info">
+                    <h2>Mocha</h2>
+                    <p>Espresso combinado com chocolate e leite cremoso.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 10,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="cafeteria">
+                <img src="assets/img/produto1.jpg" alt="Café Gelado">
+                <div class="produto-info">
+                    <h2>Café Gelado</h2>
+                    <p>Café refrescante servido gelado com uma textura cremosa.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 11,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="produto" data-categoria="cafeteria">
+                <img src="assets/img/produto2.jpg" alt="Macchiato">
+                <div class="produto-info">
+                    <h2>Macchiato</h2>
+                    <p>Espresso marcante com uma camada delicada de leite cremoso.</p>
+                    <div class="produto-footer">
+                        <strong>R$ 8,90</strong>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+            </article>
+
         </section>
+
+
+        <!-- CTA -->        </section>
 
 
         <!-- CTA -->
