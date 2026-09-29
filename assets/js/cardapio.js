@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let carrinho = [];
 
     // FILTRO DE CATEGORIAS
+    function filtrarCategoria(selecionada) {
+        produtos.forEach((produto) => {
+            produto.classList.toggle(
+                'mostrar',
+                produto.dataset.categoria === selecionada
+            );
+        });
+    }
+
     categorias.forEach((categoria) => {
         categoria.addEventListener('click', (e) => {
             e.preventDefault();
@@ -17,14 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
             categorias.forEach((c) => c.classList.remove('ativa'));
             categoria.classList.add('ativa');
 
-            produtos.forEach((produto) => {
-                produto.classList.toggle(
-                    'mostrar',
-                    produto.dataset.categoria === selecionada
-                );
-            });
+            filtrarCategoria(selecionada);
         });
     });
+
+    // Mostra a categoria ativa assim que a página carrega
+    const categoriaInicial = document.querySelector('.categoria.ativa');
+
+    if (categoriaInicial) {
+        filtrarCategoria(categoriaInicial.dataset.categoria);
+    }
 
     // ADICIONAR AO CARRINHO
     produtos.forEach((produto) => {
