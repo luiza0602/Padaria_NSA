@@ -131,10 +131,10 @@
             <!-- ===== LANCHES ===== -->
 
             <article class="produto" data-categoria="lanches">
-                <img src="assets/img/produto1.jpg" alt="Americano de Presunto">
+                <img src="assets/img/AMERICANO DE PRESUNTO (2).jpg" alt="Americano de Presunto">
                 <div class="produto-info">
                     <h2>Americano de Presunto</h2>
-                    <p>Presunto, queijo e salada temperados no pão fresquinho.</p>
+                    <p>Presunto, queijo e alface em um pão fresquinho.</p>
                     <div class="produto-footer">
                         <strong>R$ 12,00</strong>
                         <button>Adicionar</button>
@@ -143,7 +143,7 @@
             </article>
 
             <article class="produto" data-categoria="lanches">
-                <img src="assets/img/produto2.jpg" alt="Lanche Frio - Pão com Mortadela">
+                <img src="assets/img/LANCHE FRIO - PÃO COM MORTADELA SIMPLES.jpg" alt="Lanche Frio - Pão com Mortadela">
                 <div class="produto-info">
                     <h2>Lanche Frio - Pão com Mortadela</h2>
                     <p>Mortadela fatiada no pão amanteigado, simples e tradicional.</p>
@@ -155,7 +155,7 @@
             </article>
 
             <article class="produto" data-categoria="lanches">
-                <img src="assets/img/produto3.jpg" alt="Lanche Frio - Peito de Peru">
+                <img src="assets/img/LANCHE FRIO - PEITO DE PERU.jpg" alt="Lanche Frio - Peito de Peru">
                 <div class="produto-info">
                     <h2>Lanche Frio - Peito de Peru</h2>
                     <p>Peito de peru fatiado com queijo e alface crocante.</p>
@@ -167,7 +167,7 @@
             </article>
 
             <article class="produto" data-categoria="lanches">
-                <img src="assets/img/produto4.jpg" alt="Misto Quente">
+                <img src="assets/img/LANCHES QUENTES - MISTO QUENTE.jpg" alt="Misto Quente">
                 <div class="produto-info">
                     <h2>Misto Quente</h2>
                     <p>Presunto e queijo derretidos no pão quentinho.</p>
@@ -179,7 +179,7 @@
             </article>
 
             <article class="produto" data-categoria="lanches">
-                <img src="assets/img/produto1.jpg" alt="Croissant Presunto e Queijo">
+                <img src="assets/img/Croissant Presunto e Queijo.jpg" alt="Croissant Presunto e Queijo">
                 <div class="produto-info">
                     <h2>Croissant Presunto e Queijo</h2>
                     <p>Croissant amanteigado recheado com presunto, queijo e toque de mel.</p>
@@ -191,7 +191,7 @@
             </article>
 
             <article class="produto" data-categoria="lanches">
-                <img src="assets/img/produto2.jpg" alt="Croissant Cheddar e Bacon">
+                <img src="assets/img/CROISSANT SANDUBA DE CHEDDAR E BACON.jpg" alt="Croissant Cheddar e Bacon">
                 <div class="produto-info">
                     <h2>Croissant Cheddar e Bacon</h2>
                     <p>Croissant recheado com cheddar cremoso e bacon crocante.</p>
@@ -205,7 +205,7 @@
 
             
             <article class="produto mostrar" data-categoria="lanches">
-                <img src="assets/img/LANCHE FRIO - PÃO COM MORTADELA SIMPLES.jpg" alt="Lanche Frio - Pão com Presunto e Queijo Simples">
+                <img src="assets/img/LANCHE FRIO - PÃO COM PRESUNTO E QUEIJO SIMPLES.jpg" alt="Lanche Frio - Pão com Presunto e Queijo Simples">
                 <div class="produto-info">
                     <h2>Lanche Frio - Pão com Presunto e Queijo Simples</h2>
                     <p>Pão fresquinho recheado com presunto e queijo, em uma combinação simples e tradicional.</p>
@@ -217,7 +217,7 @@
             </article>
 
             <article class="produto mostrar" data-categoria="lanches">
-                <img src="assets/img/produto2.jpg" alt="Lanches Quentes - Salame com Mussarela">
+                <img src="assets/img/LANCHES QUENTE - SALAME COM MUSSARELA [.jpg" alt="Lanches Quentes - Salame com Mussarela">
                 <div class="produto-info">
                     <h2>Lanches Quentes - Salame com Mussarela</h2>
                     <p>Salame e mussarela no pão quentinho, preparados na chapa.</p>
@@ -229,7 +229,7 @@
             </article>
 
             <article class="produto mostrar" data-categoria="lanches">
-                <img src="assets/img/produto3.jpg" alt="Lanches Quentes - Misto Cremoso">
+                <img src="assets/img/LANCHES QUENTES - MISTO CREMOSO.jpg" alt="Lanches Quentes - Misto Cremoso">
                 <div class="produto-info">
                     <h2>Lanches Quentes - Misto Cremoso</h2>
                     <p>Misto quente com recheio cremoso e queijo derretido.</p>
@@ -241,7 +241,7 @@
             </article>
 
             <article class="produto mostrar" data-categoria="lanches">
-                <img src="assets/img/produto4.jpg" alt="Lanches Quentes - Misto Mineiro">
+                <img src="assets/img/Lanches Quentes - Misto Mineiro.jpg" alt="Lanches Quentes - Misto Mineiro">
                 <div class="produto-info">
                     <h2>Lanches Quentes - Misto Mineiro</h2>
                     <p>Lanche quente com sabor tradicional e queijo derretido.</p>
@@ -253,7 +253,7 @@
             </article>
 
             <article class="produto mostrar" data-categoria="lanches">
-                <img src="assets/img/produto1.jpg" alt="Lanches Quentes - Pão com Ovo">
+                <img src="assets/img/LANCHES QUENTES - PÃO COM OVO.jpg" alt="Lanches Quentes - Pão com Ovo">
                 <div class="produto-info">
                     <h2>Lanches Quentes - Pão com Ovo</h2>
                     <p>Pão quentinho recheado com ovo preparado na hora.</p>
@@ -265,7 +265,7 @@
             </article>
 
             <article class="produto mostrar" data-categoria="lanches">
-                <img src="assets/img/produto2.jpg" alt="Lanches Quentes - Peito de Peru com Mussarela">
+                <img src="assets/img/LANCHES QUENTES - PEITO DE PERU COM  MUSSARELA (1).jpg" alt="Lanches Quentes - Peito de Peru com Mussarela">
                 <div class="produto-info">
                     <h2>Lanches Quentes - Peito de Peru com Mussarela</h2>
                     <p>Peito de peru e mussarela servidos quentinhos no pão.</p>
@@ -393,24 +393,24 @@
             </article>
 
   <article class="produto" data-categoria="doces">
-                <img src="assets/img/CHOCOLATE GELADO - NUTELLA.jpg" alt="Chocolate Gelado - Nutella">
+                <img src="assets/img/FONDUE DE CHOCOLATE - MORANGO.jpg" alt="Fondue de Chocolate - Morango">
                 <div class="produto-info">
-                    <h2>Chocolate Gelado - Nutella</h2>
-                    <p>Chocolate gelado cremoso com Nutella.</p>
+                    <h2>Fondue de Chocolate - Morango</h2>
+                    <p>Fatias de morango fresco banhadas em uma calda artesanal de chocolate cremoso.</p>
                     <div class="produto-footer">
-                        <strong>R$ 8,90</strong>
+                        <strong>R$ 24,90</strong>
                         <button>Adicionar</button>
                     </div>
                 </div>
             </article>
 
             <article class="produto" data-categoria="doces">
-                <img src="assets/img/GELADIS TAÇA PROFITEROLES.jpg" alt="Chocolate Cremoso Tradicional">
+                <img src="assets/img/FONDUE DE CHOCOLATE - BANANA.jpg" alt="Fondue de Chocolate - Banana">
                 <div class="produto-info">
-                    <h2>GELADIS TAÇA PROFITEROLESl</h2>
-                    <p>Chocolate quente cremoso, feito com achocolatado especial e um toque de canela.</p>
+                    <h2>Fondue de Chocolate - Banana</h2>
+                    <p>Rodelas de banana mergulhadas em uma calda cremosa de chocolate derretido.</p>
                     <div class="produto-footer">
-                        <strong>R$ 11,00</strong>
+                        <strong>R$ 20,90</strong>
                         <button>Adicionar</button>
                     </div>
                 </div>
@@ -505,10 +505,10 @@
 
             
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/SUCO LARANJA.jpg" alt="Chocolate Gelado - Tradicional">
+                <img src="assets/img/SODA ITALIANA - LIMÃO SICILIANO.jpg" alt="Soda Italiana de Limão Siciliano">
                 <div class="produto-info">
-                    <h2>Chocolate Gelado - Tradicional</h2>
-                    <p>Chocolate gelado tradicional, cremoso e refrescante.</p>
+                    <h2>Soda Italiana de Limão Siciliano</h2>
+                    <p>Refrescante e cítrica, com o sabor marcante do limão siciliano.</p>
                     <div class="produto-footer">
                         <strong>R$ 9,00</strong>
                         <button>Adicionar</button>
@@ -517,10 +517,10 @@
             </article>
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/SUCO ABACAXI.jpg" alt="Chocolate Gelado - Avelã">
+                <img src="assets/img/SODA ITALIANA - MAÇA VERDE.jpg" alt="Soda Italiana de Maçã Verde">
                 <div class="produto-info">
-                    <h2>Chocolate Gelado - Avelã</h2>
-                    <p>Limonada natural, leve e refrescante, servida bem gelada.</p>
+                    <h2>Soda Italiana de Maçã Verde</h2>
+                    <p>Levemente doce e com o sabor irresistível da maçã verde.</p>
                     <div class="produto-footer">
                         <strong>R$ 7,50</strong>
                         <button>Adicionar</button>
@@ -529,10 +529,10 @@
             </article>
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/SUCO CUPUAÇU.jpg" alt="Chocolate Gelado - Nutella">
+                <img src="assets/img/SODA ITALIANA - MORANGO.jpg" alt="Soda Italiana de Morango">
                 <div class="produto-info">
-                    <h2>Chocolate Gelado - Nutella</h2>
-                    <p>Chá gelado e refrescante com um toque especial da casa.</p>
+                    <h2>Soda Italiana de Morango</h2>
+                    <p>Docinha, com o sabor delicado e delicioso do morango.</p>
                     <div class="produto-footer">
                         <strong>R$ 7,00</strong>
                         <button>Adicionar</button>
@@ -541,10 +541,10 @@
             </article>
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/SUCO DE CAJU.jpg" alt="Chocolate Gelado Tradicional e Avelã">
+                <img src="assets/img/SODA ITALIANA CRANBERRY.jpg" alt="Soda Italiana de Cranberry">
                 <div class="produto-info">
-                    <h2>Chocolate Gelado Tradicional e Avelã</h2>
-                    <p>Chocolate cremoso servido gelado, perfeito para dias quentes.</p>
+                    <h2>Soda Italiana de Cranberry</h2>
+                    <p>levemente ácido e com o sabor marcante do cranberry.</p>
                     <div class="produto-footer">
                         <strong>R$ 10,90</strong>
                         <button>Adicionar</button>
@@ -553,10 +553,10 @@
             </article>
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/SUCO FRUTAS VERMELHAS.jpg" alt="Chocolate Cremoso Tradicional Quente">
+                <img src="assets/img/VITAMINAS FRUTAS (BANANA, MAMAO E ABACATE).jpg" alt="Chocolate Cremoso Tradicional Quente">
                 <div class="produto-info">
-                    <h2>Chocolate Cremoso Tradicional Quente</h2>
-                    <p>Vitamina cremosa de banana preparada na hora.</p>
+                    <h2>Vitamina de Frutas</h2>
+                    <p>Cremosa e nutritiva, preparada com banana, mamão e abacate.</p>
                     <div class="produto-footer">
                         <strong>R$ 11,90</strong>
                         <button>Adicionar</button>
@@ -565,10 +565,10 @@
             </article>
 
             <article class="produto" data-categoria="bebidas">
-                <img src="assets/img/SUCO ACEROLA.jpg" alt="Chocolate Quente - Avelã">
+                <img src="assets/img/VITAMINA DE ABACATE.jpg" alt="Vitamina de Abacate">
                 <div class="produto-info">
-                    <h2>Chocolate Quente - Avelã</h2>
-                    <p>Combinação refrescante de laranja e cenoura, preparada na hora.</p>
+                    <h2>Vitamina de Abacate</h2>
+                    <p>Cremosa e saborosa, com a textura suave e o sabor marcante do abacate.</p>
                     <div class="produto-footer">
                         <strong>R$ 11,90</strong>
                         <button>Adicionar</button>
@@ -579,10 +579,10 @@
 <!-- ===== CAFETERIA ===== -->
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto3.jpg" alt="Fondue de Chocolate - Banana">
+                <img src="assets/img/CAPPUCCINO TRADICIONAL.jpg" alt="Cappuccino Tradicional:">
                 <div class="produto-info">
-                    <h2>Fondue de Chocolate - Banana</h2>
-                    <p>Rodelas de banana mergulhadas em uma calda cremosa de chocolate derretido.</p>
+                    <h2>Cappuccino Tradicional:</h2>
+                    <p>Cremoso e aromático, com o sabor clássico do café e um toque suave de leite.</p>
                     <div class="produto-footer">
                         <strong>R$ 20,90</strong>
                         <button>Adicionar</button>
@@ -591,10 +591,10 @@
             </article>
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto4.jpg" alt="Fondue de Chocolate - Morango">
+                <img src="assets/img/CAPPUCCINO NUTELLA.jpg" alt="Cappuccino de Nutella">
                 <div class="produto-info">
-                    <h2>Fondue de Chocolate - Morango</h2>
-                    <p>Fatias de morango fresco banhadas em uma calda artesanal de chocolate cremoso.</p>
+                    <h2>Cappuccino de Nutella</h2>
+                    <p>Cremoso e irresistível, combinando café, leite e o delicioso sabor de Nutella.</p>
                     <div class="produto-footer">
                         <strong>R$ 24,90</strong>
                         <button>Adicionar</button>
@@ -603,7 +603,7 @@
             </article>
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto1.jpg" alt="Frappé Cappuccino">
+                <img src="assets/img/FRAPE CAPPUCCINO.jpg" alt="Frappé Cappuccino">
                 <div class="produto-info">
                     <h2>Frappé Cappuccino</h2>
                     <p>A combinação gelada do café com chocolate e um toque cremoso de canela.</p>
@@ -615,7 +615,7 @@
             </article>
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto2.jpg" alt="Frappé de Café">
+                <img src="assets/img/FRAPES CAFÉ.jpg" alt="Frappé de Café">
                 <div class="produto-info">
                     <h2>Frappé de Café</h2>
                     <p>Nosso café favorito, gelado, super batido e cremoso, equilibrado e aromático.</p>
@@ -627,7 +627,7 @@
             </article>
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto3.jpg" alt="Frappé Caramelo">
+                <img src="assets/img/FRAPES CARAMELO.jpg" alt="Frappé Caramelo">
                 <div class="produto-info">
                     <h2>Frappé Caramelo</h2>
                     <p>Delicioso café batido com calda de caramelo artesanal e chantilly cremoso.</p>
@@ -639,7 +639,7 @@
             </article>
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto4.jpg" alt="Frappé Ovomaltine">
+                <img src="assets/img/FRAPÊS OVOMALTINE.jpg" alt="Frappé Ovomaltine">
                 <div class="produto-info">
                     <h2>Frappé Ovomaltine</h2>
                     <p>Batido com muito Ovomaltine, guarnecido com chocolate cremoso e crocante.</p>
@@ -652,7 +652,7 @@
 
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto1.jpg" alt="Expresso, Expresso Duplo">
+                <img src="assets/img/EXPRESSO, EXPRESSO DUPLO.jpg" alt="Expresso, Expresso Duplo">
                 <div class="produto-info">
                     <h2>Expresso, Expresso Duplo</h2>
                     <p>Café expresso ou expresso duplo, preparado na hora.</p>
@@ -664,7 +664,7 @@
             </article>
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto2.jpg" alt="Expresso com Doce de Leite">
+                <img src="assets/img/EXPRESSO COM DOCE DE LEITE.jpg" alt="Expresso com Doce de Leite">
                 <div class="produto-info">
                     <h2>Expresso com Doce de Leite</h2>
                     <p>Café expresso combinado com o sabor cremoso do doce de leite.</p>
@@ -676,7 +676,7 @@
             </article>
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto3.jpg" alt="Mocha Chocolate">
+                <img src="assets/img/MOCHA CHOCOLATE.jpg" alt="Mocha Chocolate">
                 <div class="produto-info">
                     <h2>Mocha Chocolate</h2>
                     <p>Mocha de chocolate, com café e chocolate em uma combinação cremosa.</p>
@@ -688,7 +688,7 @@
             </article>
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto4.jpg" alt="Mocha com Caramelo">
+                <img src="assets/img/MOCHA COM CARAMELO.jpg" alt="Mocha com Caramelo">
                 <div class="produto-info">
                     <h2>Mocha com Caramelo</h2>
                     <p>Mocha com café, chocolate e um toque de caramelo.</p>
@@ -700,10 +700,10 @@
             </article>
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto1.jpg" alt="Frapes Café">
+                <img src="assets/img/CAFÉ COADO NA HORA.jpg" alt="Café Coado na Hora">
                 <div class="produto-info">
-                    <h2>Frapes Café</h2>
-                    <p>Frapê de café gelado, cremoso e refrescante.</p>
+                    <h2> Café Coado na Hora</h2>
+                    <p>Café fresco quentinho e coado na hora</p>
                     <div class="produto-footer">
                         <strong>R$ 11,90</strong>
                         <button>Adicionar</button>
@@ -712,9 +712,9 @@
             </article>
 
             <article class="produto" data-categoria="cafeteria">
-                <img src="assets/img/produto2.jpg" alt="Frapê de Creme de Avelã">
+                <img src="assets/img/AFOGATTO.jpg" alt="Afogatto">
                 <div class="produto-info">
-                    <h2>Frapê de Creme de Avelã</h2>
+                    <h2>Afogatto</h2>
                     <p>Frapê cremoso com sabor de avelã.</p>
                     <div class="produto-footer">
                         <strong>R$ 8,90</strong>
