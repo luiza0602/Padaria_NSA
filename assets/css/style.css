@@ -882,4 +882,76 @@ header .container {
 
 
 
+.contato_mapa iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+
+@media screen and (max-width: 992px) {
+    
+    
+    .contato_mapa {
+        flex-direction: column;
+        gap: 2rem; 
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .contato-info-grid {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .contato_mapa iframe {
+        width: 100% !important; 
+        height: 350px;
+    }
+
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding-inline: 20px;
+    }
+
+    .footer-coluna {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .footer-descricao {
+        max-width: 100%;
+    }
+
+    .footer-sociais {
+        justify-content: center; 
+    }
+
+    .info-text h4,
+    .info-text p {
+        text-align: left; 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contato-section {
+        padding: 40px 15px;
+    }
+
+    .btn-whatsapp {
+        width: 100%;
+        justify-content: center; 
+    }
+
+    .contato_mapa iframe {
+        height: 280px;
+    }
+}
+
+
+
 

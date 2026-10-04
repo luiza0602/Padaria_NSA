@@ -131,7 +131,7 @@
             <!-- ===== LANCHES ===== -->
 
             <article class="produto" data-categoria="lanches">
-                <img src="assets/img/AMERICANO DE PRESUNTO (2).jpg" alt="Americano de Presunto">
+                <img src="assets/img/AMERICANO DE PRESUNTO.jpg" alt="Americano de Presunto">
                 <div class="produto-info">
                     <h2>Americano de Presunto</h2>
                     <p>Presunto, queijo e alface em um pão fresquinho.</p>

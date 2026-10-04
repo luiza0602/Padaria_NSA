@@ -1,7 +1,5 @@
-// ==========================
-// LOGIN / CADASTRO
-// Validação simples no front-end antes de enviar para login.php / cadastro.php
-// ==========================
+// login / cadastro
+// validação antes de enviar para login.php / cadastro.php
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -17,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 alert('Preencha e-mail e senha para continuar.');
             }
-            // se passou na validação, o form segue normalmente para login.php
         });
     }
 
@@ -37,7 +34,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 alert('Você precisa aceitar os Termos de Uso para continuar.');
             }
-            // se passou na validação, o form segue normalmente para cadastro.php
+        });
+    }
+
+    // Olho de mostrar/ocultar senha
+    document.querySelectorAll('.toggle-senha').forEach((icone) => {
+        icone.addEventListener('click', () => {
+            const input = icone.parentElement.querySelector('input');
+            if (!input) return;
+
+            const mostrando = input.type === 'text';
+            input.type = mostrando ? 'password' : 'text';
+
+            icone.classList.toggle('fa-eye', mostrando);
+            icone.classList.toggle('fa-eye-slash', !mostrando);
+        });
+    });
+
+    // Máscara de telefone
+    const inputTelefone = document.getElementById('cad-telefone');
+    if (inputTelefone) {
+        inputTelefone.addEventListener('input', (e) => {
+            let valor = e.target.value.replace(/\D/g, "").substring(0, 11);
+
+            if (valor.length > 10) {
+                valor = valor.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+            } else if (valor.length > 6) {
+                valor = valor.replace(/^(\d{2})(\d{4,5})/, "($1) $2-");
+            } else if (valor.length > 2) {
+                valor = valor.replace(/^(\d{2})/, "($1) ");
+            }
+
+            e.target.value = valor;
         });
     }
 

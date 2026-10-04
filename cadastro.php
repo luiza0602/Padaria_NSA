@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $termos = isset($_POST['termos']);
  
     // validações básicas
-    if (!$email || !$senha || !$telefone) {
+    if (!$nome || !$email || !$senha || !$telefone) {
         die('Preencha todos os campos.');
     }
  
@@ -44,14 +44,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // salva com senha criptografada
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
  
-    $stmt = $pdo->prepare('INSERT INTO usuarios (email, senha, telefone) VALUES (?, ?, ?)');
-    $stmt->execute([$email, $senhaHash, $telefone]);
+    $stmt = $pdo->prepare('INSERT INTO usuarios (nome, email, senha, telefone) VALUES (?, ?, ?, ?)');
+    $stmt->execute([$nome, $email, $senhaHash, $telefone]);
  
     // loga o usuário automaticamente após o cadastro
     $_SESSION['usuario_id'] = $pdo->lastInsertId();
     $_SESSION['usuario_email'] = $email;
+    $_SESSION['usuario_nome'] = $nome;
+    $_SESSION['usuario_telefone'] = $telefone;
  
-    header('Location: index.html');
+    header('Location: index.php');
     exit;
 }
  
@@ -112,35 +114,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 </div>
 
-                <div class="auth-linha">
+            <div class="auth-linha">
 
-                    <div class="campo">
-                        <label for="cad-senha">Senha</label>
+    <div class="campo">
+    <label for="cad-senha">Senha</label>
+    <div class="input-icone">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="cad-senha" name="senha" placeholder="Mínimo de 6 dígitos" minlength="6" required>
+        <i class="fa-regular fa-eye toggle-senha"></i>
+    </div>
+</div>
+
+<div class="campo">
+    <label for="cad-confirma-senha">Confirme a Senha</label>
+    <div class="input-icone">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="cad-confirma-senha" name="confirma_senha" placeholder="Digite novamente" minlength="6" required>
+        <i class="fa-regular fa-eye toggle-senha"></i>
+    </div>
+</div>
+</div>
+    
+                <div class="auth-linha"> 
+                    
+                <div class="campo">
+                        <label for="cad-telefone">Telefone</label>
                         <div class="input-icone">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="password" id="cad-senha" name="senha" placeholder="Mínimo de 6 dígitos"
-                                minlength="6" required>
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="cad-telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" oninput="mascaraTelefone(this)" required>
                         </div>
                     </div>
 
-                    <div class="campo">
-                        <label for="cad-confirma-senha">Confirme a Senha</label>
-                        <div class="input-icone">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="password" id="cad-confirma-senha" name="confirma_senha"
-                                placeholder="Digite novamente" minlength="6" required>
-                        </div>
-                    </div>
-
-                </div>
+                
 
                 <div class="campo">
-                    <label for="cad-telefone">Telefone</label>
-                    <div class="input-icone">
-                        <i class="fa-solid fa-phone"></i>
-                        <input type="tel" id="cad-telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
+                        <label for="cad-nome">Nome Completo</label>
+                        <div class="input-icone">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="cad-nome" name="nome" placeholder="Seu nome completo" required>
+                        </div>
                     </div>
-                </div>
+                    </div>
 
                 <div class="auth-termos">
                     <input type="checkbox" id="termos" name="termos" required>
@@ -152,22 +166,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <button type="submit" class="btn-auth">Criar conta</button>
 
-                <div class="auth-divisor">ou continue com</div>
+                <div class="auth-divisor"></div>
 
-                <div class="auth-social">
-                    <button type="button" class="btn-social">
-                        <i class="fa-brands fa-google"></i> Google
-                    </button>
-                    <button type="button" class="btn-social">
-                        <i class="fa-brands fa-facebook"></i> Facebook
-                    </button>
-                </div>
+                
 
                 <p class="auth-rodape">
                     Já tem uma conta? <a href="login.php">Faça Login</a>
                 </p>
 
-                <a href="index.html" class="auth-voltar">
+                <a href="index.php" class="auth-voltar">
                     <i class="fa-solid fa-arrow-left"></i> Voltar para a página inicial
                 </a>
 
@@ -177,8 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </div>
 
-    <script src="assets/js/auth.js"></script>
-
+   <script src="assets/js/autentificacao.js"></script>
 </body>
 
 </html>

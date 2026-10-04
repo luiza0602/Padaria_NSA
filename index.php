@@ -50,8 +50,7 @@ session_start();
             </a>
 
             <!-- Menu de navegação -->
-            <nav class="menu">
-
+            <nav class="menu" id="menuPrincipal">
                 <ul>
 
                     <li>
@@ -77,17 +76,21 @@ session_start();
             </nav>
 
            <!-- botao login -->
-            <?php if (isset($_SESSION['usuario_id'])): ?>
-                        <a href="perfil.php" class="btn-login">
-                            <i class="fa-regular fa-user"></i>
-            <?php echo htmlspecialchars($_SESSION['usuario_nome']); ?>
-                        </a>
-            <?php else: ?>
-                        <a href="login.php" class="btn-login">
-                            <i class="fa-regular fa-user"></i>
-                                Entrar
-                        </a>
-            <?php endif; ?>
+          <?php if (isset($_SESSION['usuario_id'])): ?>
+    <?php 
+        // Pega apenas o primeiro nome do usuário logado
+        $primeiro_nome = explode(' ', trim($_SESSION['usuario_nome'] ?? ''))[0]; 
+    ?>
+    <a href="perfil.php" class="btn-login">
+        <i class="fa-regular fa-user"></i>
+        <?php echo htmlspecialchars($primeiro_nome); ?>
+    </a>
+<?php else: ?>
+    <a href="login.php" class="btn-login">
+        <i class="fa-regular fa-user"></i>
+        Entrar
+    </a>
+<?php endif; ?>
 
         </div>
 
@@ -217,28 +220,28 @@ session_start();
                     <div class="carrossel-track" id="carrossel-track">
 
                         <div class="carrossel-slide">
-                            <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&q=80"
+                            <img src="assets/img/Croissant Presunto e Queijo.jpg"
                                 alt="Sanduíche de croissant com presunto e queijo">
                         </div>
 
                         <div class="carrossel-slide">
-                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=1200&q=80"
-                                alt="Café com leite cremoso">
+                            <img src="assets/img/CHOCOLATE QUENTE - NUTELLA.jpg"
+                                alt="Chocolate quente com Nutella e chantilly">
                         </div>
 
                         <div class="carrossel-slide">
-                            <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=1200&q=80"
-                                alt="Vinho quente artesanal">
+                            <img src="assets/img/CHÁ GELADO PÊSSEGO.jpg"
+                                alt="copo de chá gelado sabor pêssego com gelo e fatias de pêssego">
                         </div>
 
                         <div class="carrossel-slide">
-                            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&q=80"
-                                alt="Sanduíche de pão italiano">
+                            <img src="assets/img/AMERICANO DE PRESUNTO.jpg"
+                                alt="sanduíche de pão francês com presunto, queijo e alface">
                         </div>
 
                         <div class="carrossel-slide">
-                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1200&q=80"
-                                alt="Café com chantilly">
+                            <img src="assets/img/AFOGATTO.jpg"
+                                alt="afogado de café com sorvete de baunilha e calda de chocolate">
                         </div>
 
                     </div>
@@ -336,7 +339,7 @@ session_start();
         <section id="footer" class="footer-section">
             <div class="footer-container">
                 <div class="footer-coluna logo-coluna">
-                    <a href="index.html" class="footer-logo">
+                    <a href="index.php" class="footer-logo">
                         <img src="assets/img/logo.png" alt="Logo Padaria NSA">
                     </a>
                     <p>Tradição e sabor desde 2007. Pães artesanais feitos com amor e ingredientes selecionados.</p>

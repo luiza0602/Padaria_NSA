@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die('Preencha e-mail e senha.');
     }
  
-    $stmt = $pdo->prepare('SELECT id, email, senha FROM usuarios WHERE email = ?');
+    $stmt = $pdo->prepare('SELECT id_usuario, nome, email, telefone, endereco, senha FROM usuarios WHERE email = ?');
     $stmt->execute([$email]);
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
  
@@ -21,14 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
  
     // usuário autenticado
-    $_SESSION['usuario_id'] = $usuario['id'];
+    $_SESSION['usuario_id'] = $usuario['id_usuario'];
+    $_SESSION['usuario_nome'] = $usuario['nome'];
     $_SESSION['usuario_email'] = $usuario['email'];
+    $_SESSION['usuario_telefone'] = $usuario['telefone'];
+    $_SESSION['usuario_endereco'] = $usuario['endereco'];
  
     if (isset($_POST['lembrar'])) {
         setcookie('lembrar_email', $email, time() + (30 * 24 * 60 * 60), '/');
     }
  
-    header('Location: index.html');
+    header('Location: index.php');
     exit;
 }
  
@@ -88,38 +91,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
 
                 <div class="campo">
-                    <label for="login-senha">Senha</label>
-                    <div class="input-icone">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" id="login-senha" name="senha" placeholder="Digite sua senha" required>
-                    </div>
-                </div>
+        <label for="login-senha">Senha</label>
+        <div class="input-icone">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="login-senha" name="senha" placeholder="Mínimo de 6 dígitos" minlength="6" required>
+        <i class="fa-regular fa-eye toggle-senha"></i>
+    </div>
+    <a href="esqueci-senha.php" style="font-size:0.82rem;color:var(--vinho);font-weight:600;text-transform:none;">Esqueceu a senha?</a>
+</div>
+
+
 
                 <div class="auth-opcoes">
                     <label class="lembrar">
                         <input type="checkbox" id="lembrar" name="lembrar">
                         Lembrar de mim
                     </label>
+                     
                 </div>
+
+             
 
                 <button type="submit" class="btn-auth">Entrar</button>
 
-                <div class="auth-divisor">ou continue com</div>
+                <div class="auth-divisor"></div>
 
-                <div class="auth-social">
-                    <button type="button" class="btn-social">
-                        <i class="fa-brands fa-google"></i> Google
-                    </button>
-                    <button type="button" class="btn-social">
-                        <i class="fa-brands fa-facebook"></i> Facebook
-                    </button>
-                </div>
+                
 
                 <p class="auth-rodape">
                     Ainda não possui uma conta? <a href="cadastro.php">Cadastre-se</a>
                 </p>
 
-                <a href="index.html" class="auth-voltar">
+                <a href="index.php" class="auth-voltar">
                     <i class="fa-solid fa-arrow-left"></i> Voltar para a página inicial
                 </a>
 
@@ -129,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </div>
 
-    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/autentificacao.js"></script>
 
 </body>
 

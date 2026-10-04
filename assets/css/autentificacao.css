@@ -82,6 +82,7 @@
 }
 
 .input-icone {
+    position: relative;
     display: flex;
     align-items: center;
     border: 1px solid #DDD8D0;
@@ -90,6 +91,7 @@
     background: var(--bege);
     transition: border-color .2s ease;
 }
+
 
 .input-icone:focus-within {
     border-color: var(--vinho);
@@ -264,3 +266,4 @@
         gap: 0;
     }
 }
+
