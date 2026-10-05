@@ -18,52 +18,13 @@
 
 <body>
 
-    <!-- CABEÇALHO 
+    
 
-    <header>
-
-        <div class="container">
-
-           
-
-            <nav class="menu">
-
-                <ul>
-
-                    <li>
-                        <a href="index.html">Início</a>
-                    </li>
-
-                    <li>
-                        <a href="sobre">Sobre</a>
-                    </li>
-
-                    <li>
-                        <a href="cardapio.php">Cardápio</a>
-                    </li>
-
-                    <li>
-                        <a href="contato">Contato</a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-            <a href="login.php" class="btn-login">
-                Entrar
-            </a>
-
-        </div>
-
-    </header>
--->
-
-    <!-- CARDÁPIO -->
+    <!-- cardpio -  gabriel se vc fazer bugar vou te matar -->
 
     <main class="cardapio">
 
-        <!-- Barra superior -->
+     
 
    <div class="cardapio-topo">
 
@@ -78,7 +39,7 @@
 </div>
 
 
-        <!-- Apresentação -->
+       
 
         <section class="cardapio-intro">
 
@@ -101,7 +62,7 @@
         </section>
 
 
-        <!-- Categorias -->
+        <!-- categoriasss -->
 
         <nav class="categorias" id="categorias">
 
@@ -124,11 +85,11 @@
         </nav>
 
 
-        <!-- Produtos -->
+        <!-- produtinhoss -->
 
         <section class="produtos" id="produtos">
 
-            <!-- ===== LANCHES ===== -->
+           
 
             <article class="produto" data-categoria="lanches">
                 <img src="assets/img/AMERICANO DE PRESUNTO.jpg" alt="Americano de Presunto">
@@ -276,7 +237,7 @@
                 </div>
             </article>
 
-<!-- ===== DOCES ===== -->
+
 
 
 
@@ -428,7 +389,7 @@
                 </div>
             </article>
 
-<!-- ===== BEBIDAS ===== -->
+
 
             <article class="produto" data-categoria="bebidas">
                 <img src="assets/img/SUCO ACEROLA.jpg" alt="Suco de Acerola">
@@ -576,7 +537,6 @@
                 </div>
             </article>
 
-<!-- ===== CAFETERIA ===== -->
 
             <article class="produto" data-categoria="cafeteria">
                 <img src="assets/img/CAPPUCCINO TRADICIONAL.jpg" alt="Cappuccino Tradicional:">
@@ -749,7 +709,7 @@
 
     </main>
 
-    <!-- Rodapé -->
+
     <footer>
 
         <section id="footer" class="footer-section">

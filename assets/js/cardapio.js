@@ -1,3 +1,5 @@
+// cuidado qnd for mexer deu trampo e eu tava confundinfo- assnd gabriel
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const categorias = document.querySelectorAll('.categoria');
@@ -7,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let carrinho = [];
 
-    // FILTRO DE CATEGORIAS
+    // Ffiltro categorias
     function filtrarCategoria(selecionada) {
         produtos.forEach((produto) => {
             produto.classList.toggle(
@@ -86,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 900);
     }
 
-    // ABRIR CARRINHO
+    // abrir carrinho
     if (btnCarrinho) {
         btnCarrinho.addEventListener('click', abrirCarrinho);
     }
@@ -215,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('carrinho-aberto');
     }
 
-    // FLUXO DE PAGAMENTO
+    // fluxo pagamento
     function abrirPagamento() {
         const pagamento = document.createElement('div');
         pagamento.className = 'pagamento-modal';

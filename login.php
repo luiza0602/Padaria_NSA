@@ -17,8 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
  
     if (!$usuario || !password_verify($senha, $usuario['senha'])) {
-        die('E-mail ou senha incorretos.');
-    }
+    header('Location: login.php?status=erro_login');
+    exit;
+}
  
     // usuário autenticado
     $_SESSION['usuario_id'] = $usuario['id_usuario'];
@@ -79,6 +80,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <h1>Bem-vindo de volta</h1>
             <p class="auth-subtitulo">Entre com sua conta para continuar</p>
+
+            <?php if (isset($_GET['status']) && $_GET['status'] === 'erro_login'): ?>
+                <p style="color: #c0392b; font-weight: bold; text-align: center; margin-bottom: 16px; font-size: 0.88rem;">
+                    E-mail ou senha incorretos.
+                </p>
+            <?php endif; ?>
+
 
             <form class="auth-form" id="form-login" action="login.php" method="POST">
 

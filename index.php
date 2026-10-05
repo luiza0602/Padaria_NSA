@@ -333,7 +333,7 @@ session_start();
     </main>
 
 
-    <!-- Rodapé -->
+    <!-- foooterr -->
     <footer>
 
         <section id="footer" class="footer-section">
@@ -354,18 +354,15 @@ session_start();
                     </ul>
                 </div>
 
-
                 <div class="footer-coluna">
                     <h4>Redes Sociais</h4>
                     <div class="footer-sociais">
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/padaria.nsa/?hl=pt" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/padariansap/?locale=pt_BR" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                        
                     </div>
 
                 </div>
-
-
             </div>
            
            
@@ -374,11 +371,6 @@ session_start();
             <p>&copy; 2026 Padaria NSA. Todos os direitos reservados.</p>
         </div>
     </div>
-
-
-
-
-
 
         </section>
 

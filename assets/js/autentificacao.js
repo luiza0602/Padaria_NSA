@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Máscara de telefone
+    // mascara do  telefone
 const inputTelefone = document.getElementById('cad-telefone');
 if (inputTelefone) {
     inputTelefone.addEventListener('input', (e) => {

@@ -131,7 +131,7 @@ header .container {
 }
 
 
-/* Botão */
+/* botaoo */
 
 .btn-login {
 
@@ -331,7 +331,7 @@ header .container {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Ícone */
+/* icon */
 .diferencial-icon {
     font-size: 1.8rem;
     color: #8B2626; 
@@ -339,7 +339,7 @@ header .container {
     display: inline-block;
 }
 
-/* Título e Texto */
+/* titulo e texto */
 .diferencial-card h3 {
     font-size: 1.1rem;
     font-weight: 700;
@@ -605,7 +605,7 @@ header .container {
         padding: 18px 24px;
     }
  
-    /* Ajustes de conteúdo para telas pequenas */
+    /* Ajustes de conteudo para telas pequenas */
     .hero-content h1 {
         font-size: 2.2rem;
     }
@@ -664,7 +664,7 @@ header .container {
     }
 }
 
-/*Contato */
+/*contato */
 
 .section-subtitle{
     font-family: "Poppins", serif;
@@ -755,7 +755,7 @@ header .container {
     text-align: left;
 }
 
-/* Botão WhatsApp */
+/* botoao zapzap */
 .btn-whatsapp {
     display: inline-flex;
     align-items: center;
@@ -802,12 +802,12 @@ header .container {
     color: #ffffff;
 }
 
-/* Coluna 1: Logo e Texto */
+/* col1 - logo e txt */
 .footer-logo img {
     width: 130px;
     height: auto;
     margin-bottom: 15px;
-    /* Inverte a cor do logo para branco caso seja escuro */
+    /* Inverte a cor do logo para branco caso seja escuro - deu trabalho luiza  */
     filter: brightness(0) invert(1); 
 }
 
@@ -818,7 +818,7 @@ header .container {
     max-width: 280px;
 }
 
-/* Coluna 2: Links Rápidos */
+/* Col2 - links */
 .footer-links {
     list-style: none;
     padding: 0;
@@ -839,7 +839,7 @@ header .container {
     color: #ffffff;
 }
 
-/* Coluna 3: Redes Sociais */
+/* Col3 - redes sociais */
 .footer-sociais {
     display: flex;
     gap: 15px;
@@ -859,11 +859,11 @@ header .container {
 }
 
 .footer-sociais a:hover {
-    background-color: #8B2626; /* Cor destaque ao passar o mouse */
+    background-color: #8B2626;
     transform: translateY(-3px);
 }
 
-/* Rodapé Inferior (Copyright) */
+/* copyright */
 .footer-bottom {
     border-top: 1px solid #222222;
     padding: 20px 0;
