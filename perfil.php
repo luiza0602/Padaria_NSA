@@ -17,14 +17,14 @@ if (!isset($_SESSION['usuario_id'])) {
 
     <title>Minha Conta - Padaria NSA</title>
 
-    <!-- CSS -->
+    
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/perfil.css">
 
-    <!-- Ícones -->
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Fontes -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@ if (!isset($_SESSION['usuario_id'])) {
 
 <body>
 
-    <!-- Header -->
+   
     <header>
 
         <div class="container">
@@ -51,10 +51,10 @@ if (!isset($_SESSION['usuario_id'])) {
                 </ul>
             </nav>
 
-            <!-- Botão Login/Perfil -->
+           
             <?php if (isset($_SESSION['usuario_id'])): ?>
                 <?php 
-                    // Separa o nome pelos espaços e obtém apenas a primeira palavra
+                    // Separa o nome pelos espaços e obtém apenas a primeira palavra - tava confundindo
                     $primeiro_nome = explode(' ', trim($_SESSION['usuario_nome'] ?? ''))[0]; 
                 ?>
                 <a href="perfil.php" class="btn-login">
@@ -72,7 +72,7 @@ if (!isset($_SESSION['usuario_id'])) {
 
     </header>
 
-    <!-- Minha Conta -->
+    
     <section class="conta-section">
 
         <div class="container">
@@ -80,7 +80,7 @@ if (!isset($_SESSION['usuario_id'])) {
             <h1 class="conta-titulo">Minha Conta</h1>
             <p class="conta-subtitulo">Gerencie as suas informações pessoais</p>
 
-            <!-- Alertas de Status -->
+            <!-- os alerta -->
             <?php if (isset($_GET['status']) && $_GET['status'] === 'sucesso'): ?>
                 <p style="color: green; font-weight: bold; text-align: center;">Dados atualizados com sucesso!</p>
             <?php elseif (isset($_GET['status']) && $_GET['status'] === 'erro_nome_vazio'): ?>
@@ -158,7 +158,7 @@ if (!isset($_SESSION['usuario_id'])) {
 
     </section>
 
-    <!-- Rodapé -->
+    
     <footer>
 
         <section id="footer" class="footer-section">

@@ -49,14 +49,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <title>Entrar - Padaria NSA</title>
 
-    <!-- css -->
+  
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/autentificacao.css">
 
-    <!-- icones -->
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- fontes -->
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -69,12 +69,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="auth-box">
 
-        <!--lado logo-->
+       
         <div class="auth-lado">
             <img src="assets/img/logo.png" alt="Logo Padaria NSA">
         </div>
 
-        <!-- form -->
+        
         <div class="auth-conteudo">
 
             <h1>Bem-vindo de volta</h1>

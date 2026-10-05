@@ -1,7 +1,3 @@
-/* ================================
-   CARDÁPIO - PADARIA NSA
-   PARTE 1
-================================ */
 
 
 
@@ -9,13 +5,12 @@
 
 
 
-/* ================================
-   CARDÁPIO
-================================ */
+
+/* cardapioo - gabriel cuidado qnd for mexer!!!!1*/
 
 
 
-/* Barra superior */
+
 
 .cardapio-topo {
     width: 100%;
@@ -30,7 +25,7 @@
     padding: 0 6%;
 }
 
-/* Logo */
+
 .logo img {
    width: 150px;
     height: auto;
@@ -50,9 +45,7 @@
     color: #7b2026;
 }
 
-/* ================================
-   INTRODUÇÃO
-================================ */
+
 
 .cardapio-intro {
     text-align: center;
@@ -113,9 +106,7 @@ padding: 0 6%;
    transform: translate(-50%, -50%);
  }
 
-/* ================================
-   CATEGORIAS
-================================ */
+/* categorias, so p nao esquecer */
 
 .categorias {
     width: 100%;
@@ -162,18 +153,16 @@ padding: 0 6%;
     background-color: #f5f1eb;
 }
 
-/* ================================
-   BOTÃO FLUTUANTE - CARRINHO
-================================ */
+/* botão flutuanteee */
 
 .cardapio-intro {
     position: relative;
 }
 
 .cart-flutuante {
-    position: absolute;
-    right: 6%;
-    bottom: -24px;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
 
     width: 50px;
     height: 50px;
@@ -220,9 +209,7 @@ padding: 0 6%;
     justify-content: center;
 }
 
-/* ================================
-   PRODUTOS
-================================ */
+/* produtosss (deu trabalho cuidado gabriel fdp) */
 
 .produtos {
     max-width: 1200px;
@@ -327,9 +314,7 @@ padding: 0 6%;
     background-color: #3f7d4c;
 }
 
-/* ================================
-   CTA
-================================ */
+
 
 
 
@@ -377,9 +362,7 @@ padding: 0 6%;
     background-color: #5e181d;
 }
 
-/* ================================
-   RESPONSIVO
-================================ */
+/* responsividadee */
 
 @media (max-width: 880px) {
     .produtos {
@@ -401,9 +384,7 @@ padding: 0 6%;
         flex-shrink: 0;
     }
 }
-/* ========================================
-   CARRINHO - MODAL
-   ======================================== */
+/* carrinho */
 
 body.carrinho-aberto { overflow: hidden; }
 
@@ -618,9 +599,7 @@ body.carrinho-aberto { overflow: hidden; }
 }
 
 
-/* ========================================
-   PAGAMENTO - MODAL
-======================================== */
+/* pagamento */
 
 .pagamento-modal {
     position: fixed;
@@ -930,7 +909,7 @@ body.carrinho-aberto { overflow: hidden; }
 }
 
 
-/* ===== PAGAMENTO ONLINE ===== */
+/* pagamento-online */
 
 .pagamento-online-form {
     margin-top: 18px;

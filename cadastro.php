@@ -73,14 +73,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <title>Criar conta - Padaria NSA</title>
 
-    <!-- css -->
+  
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/autentificacao.css">
 
-    <!-- icones -->
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- fontes -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="cad-telefone">Telefone</label>
                         <div class="input-icone">
                             <i class="fa-solid fa-phone"></i>
-                            <input type="tel" id="cad-telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" oninput="mascaraTelefone(this)" required>
+                            <input type="tel" id="cad-telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
                         </div>
                     </div>
 

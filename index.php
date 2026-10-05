@@ -14,13 +14,13 @@ session_start();
 
     <title>Padaria NSA</title>
 
-    <!-- CSS -->
+    
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Ícones -->
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Fontes -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -33,23 +33,23 @@ session_start();
 
 <body>
 
-    <!-- Cabeçalho -->
+    
     <header>
 
         <div class="container">
 
-            <!-- Botão do menu  (visível só no mobile) -->
+            <!-- Botão do menu  só mobile -->
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"
                 aria-controls="menuPrincipal">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-            <!-- Logo -->
+          
             <a href="index.php" class="logo">
                 <img src="assets/img/logo.png" alt="Logo Padaria NSA">
             </a>
 
-            <!-- Menu de navegação -->
+            
             <nav class="menu" id="menuPrincipal">
                 <ul>
 
@@ -75,7 +75,7 @@ session_start();
 
             </nav>
 
-           <!-- botao login -->
+           <!-- botao loginnn deu uma dorzinha de cabeca -->
           <?php if (isset($_SESSION['usuario_id'])): ?>
     <?php 
         // Pega apenas o primeiro nome do usuário logado
@@ -258,7 +258,7 @@ session_start();
 
                 <div class="carrossel-dots" id="carrossel-dots"></div>
 
-                <a href="cardapio.php" class="btn-cardapio">
+                <a href="cardapio.php" class="btn-cardapio2">
                     Explorar cardápio completo
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>

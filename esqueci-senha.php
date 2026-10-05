@@ -23,9 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $linkGerado = 'redefinir-senha.php?token=' . $token;
     } else {
         // mesma mensagem genérica, não revela se o e-mail existe ou não
-        $erro = null;
+        $erro = 'Se esse e-mail existir na nossa base, um link de redefinição foi gerado.';
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -50,6 +51,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="auth-conteudo">
             <h1>Esqueceu a senha?</h1>
             <p class="auth-subtitulo">Informe seu e-mail para redefinir</p>
+
+            <?php if ($erro): ?>
+                <p style="text-align:center;color:var(--cinza);margin-bottom:16px;font-size:0.88rem;"><?= $erro ?></p>
+            <?php endif; ?>
 
             <?php if ($linkGerado): ?>
                 <p style="text-align:center;margin-bottom:20px;font-size:0.9rem;">

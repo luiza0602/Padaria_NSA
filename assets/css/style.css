@@ -48,9 +48,7 @@ img{
 }
 
 
-/* ==========================
-   CONTAINER
-========================== */
+/* containerrr */
 
 .container {
 
@@ -62,9 +60,7 @@ img{
 }
 
 
-/* ==========================
-   HEADER
-========================== */
+/* header */
 
 header {
 
@@ -249,7 +245,7 @@ header .container {
 
 }
 
-/* --- SEÇÃO SOBRE --- */
+/* secao sobree */
 .sobre {
   padding: 80px 8%;
 }
@@ -260,7 +256,7 @@ header .container {
   align-items: center;
 }
 
-/* --- coluna imagem --- */
+/* -coluna imagem */
 .sobre-imagem {
   flex: 1;
   position: relative;
@@ -288,7 +284,7 @@ header .container {
 }
 
 .tagline {
-  color: #8B2626; /* Cor vinho/bordo da paleta */
+  color: #8B2626; 
     font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -311,7 +307,7 @@ header .container {
 /* seçao diferenciais */
 .diferenciais-section {
     padding: 60px 0;
-    background-color: #faf8f5; /* Fundo levemente bege/off-white */
+    background-color: #faf8f5; 
 }
 
 .diferenciais-container {
@@ -323,7 +319,7 @@ header .container {
 /* Card Individual */
 .diferencial-card {
     flex: 1;
-    background-color: #f5f0eb; /* Fundo do card */
+    background-color: #f5f0eb; /* fundo card p nn confundir */
     padding: 30px 20px;
     border-radius: 8px;
     text-align: center;
@@ -338,7 +334,7 @@ header .container {
 /* Ícone */
 .diferencial-icon {
     font-size: 1.8rem;
-    color: #8B2626; /* Cor vinho do tema */
+    color: #8B2626; 
     margin-bottom: 15px;
     display: inline-block;
 }
@@ -439,7 +435,7 @@ header .container {
     right: 16px;
 }
 
-/* --- dots --- */
+/*  dotss  */
 
 .carrossel-dots {
     display: flex;
@@ -465,7 +461,7 @@ header .container {
     background: var(--vinho);
 }
 
-/* --- link cardápio --- */
+/*  link cardaapio  */
 
 .btn-cardapio {
     display: inline-flex;
@@ -511,7 +507,7 @@ header .container {
  }
 
  
-/*RESPONSIVIDADE*/
+/*responsividade (luiza mexendoo)*/
  
  
 @media (max-width: 880px) {
